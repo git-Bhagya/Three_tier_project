@@ -1,0 +1,1269 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Ci_Project.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Ci_Project.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\404-Page-image.png",
+      "PackagePath": "staticwebassets\\Assets\\404-Page-image.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Already-volunteered.png",
+      "PackagePath": "staticwebassets\\Assets\\Already-volunteered.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Animal-welfare-&-save-birds-campaign-1.png",
+      "PackagePath": "staticwebassets\\Assets\\Animal-welfare-&-save-birds-campaign-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Animal-welfare-&-save-birds-campaign.png",
+      "PackagePath": "staticwebassets\\Assets\\Animal-welfare-&-save-birds-campaign.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "PackagePath": "staticwebassets\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png",
+      "PackagePath": "staticwebassets\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png",
+      "PackagePath": "staticwebassets\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png",
+      "PackagePath": "staticwebassets\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png",
+      "PackagePath": "staticwebassets\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png",
+      "PackagePath": "staticwebassets\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png",
+      "PackagePath": "staticwebassets\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png",
+      "PackagePath": "staticwebassets\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png",
+      "PackagePath": "staticwebassets\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png",
+      "PackagePath": "staticwebassets\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-1.png",
+      "PackagePath": "staticwebassets\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-2.png",
+      "PackagePath": "staticwebassets\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-3.png",
+      "PackagePath": "staticwebassets\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-4.png",
+      "PackagePath": "staticwebassets\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-4.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-5.png",
+      "PackagePath": "staticwebassets\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-5.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-login.png",
+      "PackagePath": "staticwebassets\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-login.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability.png",
+      "PackagePath": "staticwebassets\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Nourish-the-Children-in--African-country-1.png",
+      "PackagePath": "staticwebassets\\Assets\\Nourish-the-Children-in--African-country-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Nourish-the-Children-in--African-country.png",
+      "PackagePath": "staticwebassets\\Assets\\Nourish-the-Children-in--African-country.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Open-Volunteering-Requests.png",
+      "PackagePath": "staticwebassets\\Assets\\Open-Volunteering-Requests.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Plantation-and-Afforestation-programme-1.png",
+      "PackagePath": "staticwebassets\\Assets\\Plantation-and-Afforestation-programme-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Plantation-and-Afforestation-programme.png",
+      "PackagePath": "staticwebassets\\Assets\\Plantation-and-Afforestation-programme.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Seats-left.png",
+      "PackagePath": "staticwebassets\\Assets\\Seats-left.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Volunteering-Rank.png",
+      "PackagePath": "staticwebassets\\Assets\\Volunteering-Rank.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\Voted-Missions.png",
+      "PackagePath": "staticwebassets\\Assets\\Voted-Missions.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\achieved.png",
+      "PackagePath": "staticwebassets\\Assets\\achieved.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\add.png",
+      "PackagePath": "staticwebassets\\Assets\\add.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\add1.png",
+      "PackagePath": "staticwebassets\\Assets\\add1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\arrow.png",
+      "PackagePath": "staticwebassets\\Assets\\arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\bell-big.png",
+      "PackagePath": "staticwebassets\\Assets\\bell-big.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\bell.png",
+      "PackagePath": "staticwebassets\\Assets\\bell.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\bin.png",
+      "PackagePath": "staticwebassets\\Assets\\bin.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\calender.png",
+      "PackagePath": "staticwebassets\\Assets\\calender.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\cancel.png",
+      "PackagePath": "staticwebassets\\Assets\\cancel.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\cancel1.png",
+      "PackagePath": "staticwebassets\\Assets\\cancel1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\checked.png",
+      "PackagePath": "staticwebassets\\Assets\\checked.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\cross.png",
+      "PackagePath": "staticwebassets\\Assets\\cross.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\deadline.png",
+      "PackagePath": "staticwebassets\\Assets\\deadline.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\doc.png",
+      "PackagePath": "staticwebassets\\Assets\\doc.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\down.png",
+      "PackagePath": "staticwebassets\\Assets\\down.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\drag-and-drop.png",
+      "PackagePath": "staticwebassets\\Assets\\drag-and-drop.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\drop-down.png",
+      "PackagePath": "staticwebassets\\Assets\\drop-down.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\eye.png",
+      "PackagePath": "staticwebassets\\Assets\\eye.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\facebook.png",
+      "PackagePath": "staticwebassets\\Assets\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\favorite.jpg",
+      "PackagePath": "staticwebassets\\Assets\\favorite.jpg"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\filter.png",
+      "PackagePath": "staticwebassets\\Assets\\filter.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\flower.avif",
+      "PackagePath": "staticwebassets\\Assets\\flower.avif"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\gift.png",
+      "PackagePath": "staticwebassets\\Assets\\gift.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\graph.png",
+      "PackagePath": "staticwebassets\\Assets\\graph.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\grid.png",
+      "PackagePath": "staticwebassets\\Assets\\grid.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\heart.png",
+      "PackagePath": "staticwebassets\\Assets\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\heart1.png",
+      "PackagePath": "staticwebassets\\Assets\\heart1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\hours.png",
+      "PackagePath": "staticwebassets\\Assets\\hours.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\image.png",
+      "PackagePath": "staticwebassets\\Assets\\image.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\image1.png",
+      "PackagePath": "staticwebassets\\Assets\\image1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\image2.png",
+      "PackagePath": "staticwebassets\\Assets\\image2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\img.png",
+      "PackagePath": "staticwebassets\\Assets\\img.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\img1.png",
+      "PackagePath": "staticwebassets\\Assets\\img1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\img11.png",
+      "PackagePath": "staticwebassets\\Assets\\img11.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\img2.png",
+      "PackagePath": "staticwebassets\\Assets\\img2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\img22.png",
+      "PackagePath": "staticwebassets\\Assets\\img22.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\img3.png",
+      "PackagePath": "staticwebassets\\Assets\\img3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\img33.png",
+      "PackagePath": "staticwebassets\\Assets\\img33.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\info.png",
+      "PackagePath": "staticwebassets\\Assets\\info.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\left.png",
+      "PackagePath": "staticwebassets\\Assets\\left.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\left1.png",
+      "PackagePath": "staticwebassets\\Assets\\left1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\linkedin.png",
+      "PackagePath": "staticwebassets\\Assets\\linkedin.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\list.png",
+      "PackagePath": "staticwebassets\\Assets\\list.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\logo.png",
+      "PackagePath": "staticwebassets\\Assets\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\mission.png",
+      "PackagePath": "staticwebassets\\Assets\\mission.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\my-story.png",
+      "PackagePath": "staticwebassets\\Assets\\my-story.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\new-message.png",
+      "PackagePath": "staticwebassets\\Assets\\new-message.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\next.png",
+      "PackagePath": "staticwebassets\\Assets\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\organization.png",
+      "PackagePath": "staticwebassets\\Assets\\organization.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\pdf.png",
+      "PackagePath": "staticwebassets\\Assets\\pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\pin.png",
+      "PackagePath": "staticwebassets\\Assets\\pin.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\pin1.png",
+      "PackagePath": "staticwebassets\\Assets\\pin1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\previous.png",
+      "PackagePath": "staticwebassets\\Assets\\previous.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\right-arrow.png",
+      "PackagePath": "staticwebassets\\Assets\\right-arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\right-arrow1.png",
+      "PackagePath": "staticwebassets\\Assets\\right-arrow1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\right-arrow2.png",
+      "PackagePath": "staticwebassets\\Assets\\right-arrow2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\right-white.png",
+      "PackagePath": "staticwebassets\\Assets\\right-white.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\right.png",
+      "PackagePath": "staticwebassets\\Assets\\right.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\search.png",
+      "PackagePath": "staticwebassets\\Assets\\search.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\selected-star.png",
+      "PackagePath": "staticwebassets\\Assets\\selected-star.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\settings.png",
+      "PackagePath": "staticwebassets\\Assets\\settings.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\star-empty.png",
+      "PackagePath": "staticwebassets\\Assets\\star-empty.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\star.png",
+      "PackagePath": "staticwebassets\\Assets\\star.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\twitter.png",
+      "PackagePath": "staticwebassets\\Assets\\twitter.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\up.png",
+      "PackagePath": "staticwebassets\\Assets\\up.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\user-img-large.png",
+      "PackagePath": "staticwebassets\\Assets\\user-img-large.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\user-img.png",
+      "PackagePath": "staticwebassets\\Assets\\user-img.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\user.png",
+      "PackagePath": "staticwebassets\\Assets\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\user1.png",
+      "PackagePath": "staticwebassets\\Assets\\user1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer1.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer2.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer3.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer4.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer4.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer5.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer5.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer6.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer6.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer7.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer7.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer8.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer8.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\volunteer9.png",
+      "PackagePath": "staticwebassets\\Assets\\volunteer9.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\web.png",
+      "PackagePath": "staticwebassets\\Assets\\web.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Assets\\xlsx.png",
+      "PackagePath": "staticwebassets\\Assets\\xlsx.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Document\\404-Page-image.png",
+      "PackagePath": "staticwebassets\\Document\\404-Page-image.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Document\\achieved.png",
+      "PackagePath": "staticwebassets\\Document\\achieved.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\Document\\add1.png",
+      "PackagePath": "staticwebassets\\Document\\add1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\404-Page-image (2) - Copy.png",
+      "PackagePath": "staticwebassets\\UploadImage\\404-Page-image (2) - Copy.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\404-Page-image.png",
+      "PackagePath": "staticwebassets\\UploadImage\\404-Page-image.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png",
+      "PackagePath": "staticwebassets\\UploadImage\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\Grow-Trees-On-the-path-to-environment-sustainability-login.png",
+      "PackagePath": "staticwebassets\\UploadImage\\Grow-Trees-On-the-path-to-environment-sustainability-login.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\Plantation-and-Afforestation-programme-1.png",
+      "PackagePath": "staticwebassets\\UploadImage\\Plantation-and-Afforestation-programme-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\WhatsApp Image 2022-11-23 at 7.14.15 AM.jpeg",
+      "PackagePath": "staticwebassets\\UploadImage\\WhatsApp Image 2022-11-23 at 7.14.15 AM.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\img1.png",
+      "PackagePath": "staticwebassets\\UploadImage\\img1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\UploadImage\\img22.png",
+      "PackagePath": "staticwebassets\\UploadImage\\img22.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\Admin.css",
+      "PackagePath": "staticwebassets\\css\\Admin.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\Datatable.css",
+      "PackagePath": "staticwebassets\\css\\Datatable.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\PolicyPage.css",
+      "PackagePath": "staticwebassets\\css\\PolicyPage.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\ShareStory.css",
+      "PackagePath": "staticwebassets\\css\\ShareStory.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\StoryDetails.css",
+      "PackagePath": "staticwebassets\\css\\StoryDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\StoryListingPage.css",
+      "PackagePath": "staticwebassets\\css\\StoryListingPage.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\UserProfile.css",
+      "PackagePath": "staticwebassets\\css\\UserProfile.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\Volunteer.css",
+      "PackagePath": "staticwebassets\\css\\Volunteer.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\VolunteerTimesheet.css",
+      "PackagePath": "staticwebassets\\css\\VolunteerTimesheet.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\forgot.css",
+      "PackagePath": "staticwebassets\\css\\forgot.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\platform.css",
+      "PackagePath": "staticwebassets\\css\\platform.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\registration.css",
+      "PackagePath": "staticwebassets\\css\\registration.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\resetPassword.css",
+      "PackagePath": "staticwebassets\\css\\resetPassword.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\404-Page-image.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\404-Page-image.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Already-volunteered.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Already-volunteered.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Animal-welfare-_-save-birds-campaign-1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Animal-welfare-_-save-birds-campaign-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Animal-welfare-_-save-birds-campaign.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Animal-welfare-_-save-birds-campaign.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Assets.zip",
+      "PackagePath": "staticwebassets\\images\\Assets\\Assets.zip"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-5.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity-6.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold-2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-2.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-3.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-4.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-4.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-5.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-5.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-login.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability-login.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Grow-Trees-On-the-path-to-environment-sustainability.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Nourish-the-Children-in--African-country-1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Nourish-the-Children-in--African-country-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Nourish-the-Children-in--African-country.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Nourish-the-Children-in--African-country.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Open-Volunteering-Requests.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Open-Volunteering-Requests.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Plantation-and-Afforestation-programme-1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Plantation-and-Afforestation-programme-1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Plantation-and-Afforestation-programme.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Plantation-and-Afforestation-programme.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Seats-left.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Seats-left.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Thumbs.db",
+      "PackagePath": "staticwebassets\\images\\Assets\\Thumbs.db"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Volunteering-Rank.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Volunteering-Rank.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\Voted-Missions.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\Voted-Missions.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\achieved.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\achieved.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\add.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\add.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\add1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\add1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\arrow.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\bell-big.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\bell-big.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\bell.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\bell.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\bin.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\bin.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\calender.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\calender.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\cancel.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\cancel.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\cancel1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\cancel1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\checked.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\checked.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\cross.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\cross.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\deadline.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\deadline.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\doc.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\doc.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\down.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\down.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\drag-and-drop.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\drag-and-drop.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\drop-down.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\drop-down.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\eye.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\eye.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\facebook.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\filter.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\filter.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\gift.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\gift.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\graph.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\graph.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\grid.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\grid.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\heart.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\heart1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\heart1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\hours.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\hours.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\image.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\image.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\image1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\image1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\image2.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\image2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\img.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\img.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\img1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\img1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\img11.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\img11.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\img2.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\img2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\img22.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\img22.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\img3.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\img3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\img33.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\img33.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\info.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\info.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\left.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\left.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\left1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\left1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\linkedin.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\linkedin.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\list.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\list.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\logo.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\mission.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\mission.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\my-story.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\my-story.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\new-message.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\new-message.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\next.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\organization.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\organization.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\pdf.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\pdf.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\pin.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\pin.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\pin1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\pin1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\previous.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\previous.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\right-arrow.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\right-arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\right-arrow1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\right-arrow1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\right-arrow2.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\right-arrow2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\right-white.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\right-white.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\right.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\right.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\search.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\search.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\selected-star.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\selected-star.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\settings.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\settings.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\star-empty.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\star-empty.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\star.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\star.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\twitter.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\twitter.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\up.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\up.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\user-img-large.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\user-img-large.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\user-img.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\user-img.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\user.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\user1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\user1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer1.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer1.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer2.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer2.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer3.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer3.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer4.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer4.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer5.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer5.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer6.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer6.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer7.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer7.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer8.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer8.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\volunteer9.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\volunteer9.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\web.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\web.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\images\\Assets\\xlsx.png",
+      "PackagePath": "staticwebassets\\images\\Assets\\xlsx.png"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\Admin.js",
+      "PackagePath": "staticwebassets\\js\\Admin.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\ShareStory.js",
+      "PackagePath": "staticwebassets\\js\\ShareStory.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\StoryDetails.js",
+      "PackagePath": "staticwebassets\\js\\StoryDetails.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\StoryListingPage.js",
+      "PackagePath": "staticwebassets\\js\\StoryListingPage.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\UserProfile.js",
+      "PackagePath": "staticwebassets\\js\\UserProfile.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\Volunteer.js",
+      "PackagePath": "staticwebassets\\js\\Volunteer.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\VolunteerTimeSheet.js",
+      "PackagePath": "staticwebassets\\js\\VolunteerTimeSheet.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\platform.js",
+      "PackagePath": "staticwebassets\\js\\platform.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\BHAGYA\\Desktop\\Ci-Platform-main\\CI_Integration-main\\Laptop_CI-main\\Ci_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Ci_Project.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Ci_Project.props",
+      "PackagePath": "build\\Ci_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Ci_Project.props",
+      "PackagePath": "buildMultiTargeting\\Ci_Project.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Ci_Project.props",
+      "PackagePath": "buildTransitive\\Ci_Project.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

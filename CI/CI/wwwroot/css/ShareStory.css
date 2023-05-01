@@ -1,0 +1,17 @@
+﻿#List {
+    display: none;
+}
+
+@media (max-width:767px) {
+    #List {
+        display: block;
+    }
+
+    #Main {
+        display: none;
+    }
+
+    .dropdown {
+        float: left;
+    }
+}

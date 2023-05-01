@@ -1,0 +1,284 @@
+﻿@model AdminViewModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+</head>
+<body>
+    <div class="container border mt-5" style="background-color:#F8F9FC;">
+        <div class="">
+            <h4 class="fw-normal my-4 ms-2">Edit</h4>
+        </div>
+    </div>
+    <form id="missionValidation">
+    <div class="row">
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Mission Title</label>
+            <input type="text" class="form-control" id="MTitle" asp-for="MissionTitle">
+            <span class="text-danger" asp-validation-for="MissionTitle"></span>
+        </div>
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Short Description</label>
+            <input type="text" class="form-control" id="ShortDescription" asp-for="SDescription">
+            <span class="text-danger" asp-validation-for="SDescription"></span>
+
+        </div>
+
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Description Title</label>
+        <textarea type="text" class="form-control" id="Descriptions" rows="6" cols="6" asp-for="Description"></textarea>
+            <span class="text-danger" asp-validation-for="Description"></span>
+
+    </div>
+    <div class="row">
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Country Id</label>
+            <input type="number" class="form-control" id="CountryId" asp-for="country">
+            <span class="text-danger" asp-validation-for="country"></span>
+
+        </div>
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">City Id</label>
+            <input type="number" class="form-control" id="CityId" asp-for="city">
+            <span class="text-danger" asp-validation-for="city"></span>
+
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Organization Name</label>
+            <input type="text" class="form-control" id="OrgNames" asp-for="OrgName">
+            <span class="text-danger" asp-validation-for="OrgName"></span>
+
+        </div>
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Organization Details</label>
+            <textarea type="text" class="form-control" id="OrgDetails" asp-for="OrgDetails"></textarea>
+            <span class="text-danger" asp-validation-for="OrgDetails"></span>
+
+        </div>
+
+    </div>
+    <div class="row">
+         <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Add Images</label>
+            <input type="file" class="form-control"  multiple accept="image/*,video/*" id="missionImagesEdit" asp-for="Mimages">
+            <span class="text-danger" asp-validation-for="Mimages"></span>
+
+        </div>
+        <div class="mb-3 col-lg-6">
+            <p>Mission Images</p>
+                @foreach(var image in Model.MissionImages)
+                {
+                    <img src="@image"/>
+                }
+            @*<span id="missionImgs"></span>*@
+        </div>
+
+    </div>
+    <div class="row">
+         <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Add Document</label>
+            <input type="file" class="form-control"  multiple accept="image/*,video/*" id="MDoc">
+            <span class="text-danger" asp-validation-for="Document"></span>
+
+        </div>
+        <div class="mb-3 col-lg-6">
+            <p>Mission Document</p>
+                @foreach(var doc in Model.missiondocs)
+                {
+                    <img src="@doc"/>
+                }
+            @*<span id="missionDocs"></span>*@
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Mission video</label>
+            <input type="text" class="form-control" id="missionVideosEdit" asp-for="Video">
+            <span class="text-danger" asp-validation-for="Video"></span>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="inputState" class="form-label">Skill Name</label>
+                <div class="dropdown">
+                    <button class="btn btn-primary bg-transparent text-dark border-dark w-100 float-start" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Skills
+                    </button>
+                    <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                        @*@foreach (var skill in Model.SkillList)
+                        {
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="@skill.SkillId" id="@skill.SkillId" name="listOfSkill" asp-for="MultipleSkill"/>
+                                        <label class="form-check-label" for="@skill.SkillId">@skill.SkillName</label>
+                                    </div>
+                                </a>
+                            </li>
+                        }*@
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">start Date</label>
+            <input type="date" class="form-control" id="SDate" asp-for="StartDate">
+            <span class="text-danger" asp-validation-for="StartDate"></span>
+
+        </div>
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">End Date</label>
+            <input type="date" class="form-control actionEdit" id="EDate" asp-for="EndDate">
+            <span class="text-danger" asp-validation-for="EndDate"></span>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Mission Type</label>
+            <input type="text" class="form-control" id="MType" asp-for="MissionType">
+            <span class="text-danger" asp-validation-for="MissionType"></span>
+
+        </div>
+        <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Mission Seats</label>
+            <input type="number" class="form-control" id="Seat" asp-for="Seats">
+            <span class="text-danger" asp-validation-for="Seats"></span>
+
+        </div>
+
+    </div>
+    @*<div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Mission Deadline</label>
+        <input type="text" class="form-control" id="Deadline">
+        </div>*@
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Mission Theme</label>
+        <input type="number" class="form-control" id="MTheme" asp-for="Theme">
+            <span class="text-danger" asp-validation-for="Theme"></span>
+
+    </div>
+  
+         <div class="row d-flex justify-content-end">
+            <div class="text-end mb-3">
+                <button type="button" class="btn buttonColor rounded-5" style="color:#f88634;border:2px solid #f88634">Cancel</button>
+                <button type="submit" class="btn buttonColor rounded-5 ms-2" style="color:#f88634;border:2px solid #f88634" @*onclick="saveChangesMission()"*@>Save</button>
+            </div>
+        </div>
+        </form>
+    <style>
+        .buttonColor:hover {
+            color: white;
+            background-color: #f88634;
+        }
+    </style>
+
+</body>
+</html>
+<script>
+    //edit and update for both
+        $('#missionValidation').on('submit', e => saveChangesMission());
+        function saveChangesMission(){
+            event.preventDefault();
+            $("#missionValidation").valid();
+		    if (!$("#missionValidation").valid())
+            {
+
+			    return;
+		    } 
+            else
+            {
+                //function saveChangesMission(){
+                $.ajax({
+                    url : "/Admin/EditMissionData",
+                    method : "POST",
+                    data:{
+                        id:missionid,
+                        mTitle:$('#MTitle').val(),
+                        Sdes:$('#ShortDescription').val(),
+                        des:$('#Descriptions').val(),
+                        CityId:$('#CityId').val(),
+                        CountryId:$('#CountryId').val(),
+                        OrgName:$('#OrgNames').val(),
+                        OrgDetails:$('#OrgDetails').val(),
+                        Seats:$('#Seat').val(),
+                        mType:$('#MType').val(),
+                        sDate:$('#SDate').val(),
+                        eDate:$('#EDate').val(),
+                        mImages:$('#missionImagesEdit').val(),
+                        mVideo:$('#missionVideosEdit').val(),
+                        mDoc:$('#MDoc').val(),
+                    },
+                    success: function(){
+                        location.reload();
+                    }
+                });
+            }
+        } 
+
+         //city and country 
+        getCountry();
+		$('#City').attr('disabled', true);
+		$('#Country').change(function () {
+			$('#City').empty();
+			$('#City').append('<option>Select City</option>')
+			$('#City').attr('disabled', false);
+			var countryId = $('#Country	').val();
+			$.ajax({
+				url: '/User/getCityList',
+				data: {
+					id: countryId,
+				},
+				type: "POST",
+				success: function (result) {
+					$.each(result, function (i, data) {
+						$('#City').append('<option value=' + data.cityId + '>' + data.name + '</option>')
+					})
+
+				}
+			})
+		})
+
+		function getCountry() {
+			$.ajax({
+				url: '/User/getCountryList',
+				type: 'POST',
+				success: function (result) {
+					$.each(result, function (i, data) {
+						$('#Country').append('<option value=' + data.countryId + '>' + data.name + '</option>');
+					})
+				},
+			})
+		}
+
+        //select Theme
+        function selectTheme() {
+			$.ajax({
+				url: '/Admin/getThemeList',
+				type: 'POST',
+				success: function (result) {
+					$.each(result, function (i, data) {
+						$('#Themes').append('<option value=' + data.themeId + '>' + data.title + '</option>');
+					})
+				},
+			})
+		}
+</script>

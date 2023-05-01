@@ -1,0 +1,676 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/StoryListingPage.css">
+
+    <title>Story Listing</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar" id="List">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src=".\..\images\Assets\user-img.png" class="rounded-circle" style="width:50px;height:50px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img src=".\..\images\Assets\list.png">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                                style="text-decoration: none; color: #333333;">Policy
+                                <img src=".\..\images\Assets\drop-down.png"></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                                style="text-decoration: none; color: #333333;">Evan Donohue
+                                <img src=".\..\images\Assets\drop-down.png"></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar nav" id="Main">
+            <div class="col-lg-2 pt-3">
+                <p class="text-end">Stories</p>
+            </div>
+            <div class="dropdown col-lg-6 ">
+                Policy
+                <button class=" dropdown" type="button" data-bs-toggle="dropdown"
+                    style="border:none; background-color:white;"><img src=".\..\images\Assets\drop-down.png">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                </ul>
+
+            </div>
+
+            <div class="dropdown col-lg-3 text-end">
+                <div>
+                    <img src=".\..\images\Assets\user-img.png" data-bs-toggle="dropdown"
+                        style="border-radius: 50%; width:50px;height:50px">
+                    <span>Evan Donohue</span>
+
+                    <button class=" dropdown profile" type="button-item" data-bs-toggle="dropdown-menu"
+                        style="border:none;background-color: white;"><img
+                            src=".\..\images\Assets\drop-down.png"></button>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">My Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Help</a></li>
+                        <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row border-top  filters-section d-flex align-items-center flex-wrap justify-content-center">
+            <div class="col-lg-2">
+
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 mt-2 border-end justify-content-center">
+                <div>
+                    <a href="#" style="text-decoration: none;color:gray;  background-color: rgb(245, 244, 244);
+                        ">
+                        <img src=".\..\images\Assets\search.png"><input type="text" placeholder="Search Mission..."
+                            style="border:none;"></a>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Country &emsp;&ensp;<img src=".\..\images\Assets\drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+                        </label>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="India"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            India
+                        </label><br>
+                        <input class="form-check-input ms-1 ms-1 checkbox" type="checkbox" value="Canada"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            Canada
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Austalia"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Austalia
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="USA" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            USA
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Pakistan"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Pakistan
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="China"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            China
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Russia"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Russia
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Shrilanka"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Shrilanka
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        City &emsp;&ensp;<img src=".\..\images\Assets\drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+                        </label>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Ahmedabad"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            Ahmedabad
+                        </label><br>
+                        <input class="form-check-input ms-1 ms-1 checkbox" type="checkbox" value="Mehsana"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            Mehsana
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Delhi"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Delhi
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Rajkot"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Rajkot
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Bombay"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Bombay
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Udaipur"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Udaipur
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Lonavala"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Lonavala
+                        </label><br>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Bharuch"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Bharuch
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Theme &emsp;&ensp;<img src=".\..\images\Assets\drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+                        </label>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Theme1"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            Theme1
+                        </label><br><input class="form-check-input ms-1 ms-1 checkbox" type="checkbox" value="Theme2"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            Theme2
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Theme3"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Theme3
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Theme4"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Theme4
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Theme5"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Theme5
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Theme6"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Theme6
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Theme7"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Theme7
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Theme8"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Theme8
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Skills &emsp;&ensp;<img src=".\..\images\Assets\drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+                        </label>
+                        <input class="form-check-input ms-1 checkbox" type="checkbox" value="Skill1"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            Skill1
+                        </label><br><input class="form-check-input ms-1 ms-1 checkbox" type="checkbox" value="Skill2"
+                            id="flexCheckDefault">
+                        <label class="form-check-label " for="flexCheckDefault">
+                            Skill2
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Skill3"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Skill3
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Skill4"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Skill4
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Skill5"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Skill5
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Skill6"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Skill6
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Skill7"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Skill7
+                        </label><br><input class="form-check-input ms-1 checkbox" type="checkbox" value="Skill8"
+                            id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Skill8
+                        </label><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+
+            <hr>
+        </div>
+        <div class="main_img">
+            <img src=".\..\images\Assets\Grow-Trees-On-the-path-to-environment-sustainability-2.png" alt="" style="width:100%;height:500px;object-fit:cover;
+                ">
+            <div class="content text-center">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione repudiandae autem nihil error
+                    voluptatibus at! Unde accusamus <br> temporibus, eaque consectetur, aspernatur incidunt, sed quos
+                    repellendus.</p>
+                <button type="button" class="btn btn-outline-light shareYourStoryBtn">Share Your Story <i
+                        class="bi bi-arrow-right"></i></button>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Grow-Trees-On-the-path-to-environment-sustainability.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                    class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap1">Customer Experiment</button>
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">10 User and Customer engagement
+                                strategies for 2019
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="imgs">
+                            <img src=".\..\images\Assets\volunteer1.png" alt="">&ensp; Andrwe Johnson
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Animal-welfare-_-save-birds-campaign.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap2">Update</button>
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">Overheard in Product: Good Prducts, the
+                                End of Failure
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="img2">
+                            <img src=".\..\images\Assets\volunteer2.png" alt="">&ensp; Charles Vigue
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap1">Customer Experiment</button>
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">10 User and Customer engagement
+                                strategies for 2019
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="imgs">
+                            <img src=".\..\images\Assets\volunteer7.png" alt="">&ensp; Travis Steen
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Grow-Trees-On-the-path-to-environment-sustainability.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap1">Customer Experiment</button>
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">10 User and Customer engagement
+                                strategies for 2019
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="imgs">
+                            <img src=".\..\images\Assets\volunteer1.png" alt="">&ensp; Andrwe Johnson
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Animal-welfare-_-save-birds-campaign.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap2">Update</button>
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">Overheard in Product: Good Prducts, the
+                                End of Failure
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="img2">
+                            <img src=".\..\images\Assets\volunteer2.png" alt="">&ensp; Charles Vigue
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap1">Customer Experiment</button>
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">10 User and Customer engagement
+                                strategies for 2019
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="imgs">
+                            <img src=".\..\images\Assets\volunteer7.png" alt="">&ensp; Travis Steen
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Grow-Trees-On-the-path-to-environment-sustainability.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap1">Customer Experiment</button>
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">10 User and Customer engagement
+                                strategies for 2019
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="imgs">
+                            <img src=".\..\images\Assets\volunteer1.png" alt="">&ensp; Andrwe Johnson
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Animal-welfare-_-save-birds-campaign.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap2">Update</button>
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">Overheard in Product: Good Prducts, the
+                                End of Failure
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="img2">
+                            <img src=".\..\images\Assets\volunteer2.png" alt="">&ensp; Charles Vigue
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <div class="card">
+                    <div class="position-relative w-100 h-100 CardImage">
+                        <img src=".\..\images\Assets\Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
+                            class="card-img-top image" alt="...">
+                        <div class="ViewButton text-center position-absolute">
+                            <button type="button" class="btn btn-outline-light shareYourStoryBtn">View Details<i
+                                class="bi bi-arrow-right"></i></button>
+                        </div>
+
+                    </div>
+                    <button class="btn text" id="overlap1">Customer Experiment</button>
+
+
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <p style="font-size: 25px;color: rgb(61, 61, 61);">10 User and Customer engagement
+                                strategies for 2019
+                            </p>
+                        </h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                            nisi amet,
+                            adipisci tenetur totam... </p>
+
+                        <div class="imgs">
+                            <img src=".\..\images\Assets\volunteer7.png" alt="">&ensp; Travis Steen
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <footer aria-label="Page navigation example">
+            <ul class="pagination justify-content-center mt-5 mb-5">
+                <li class="page-item">
+                    <a class="page-link ms-2 me-2" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link ms-2 me-2" href="#">
+                        < </a>
+                </li>
+                <li class="page-item"><a class="page-link active ms-2 me-2" href="#">1</a></li>
+                <li class="page-item"><a class="page-link ms-2 me-2" href="#">2</a></li>
+                <li class="page-item"><a class="page-link ms-2 me-2" href="#">3</a></li>
+                <li class="page-item"><a class="page-link ms-2 me-2" href="#">4</a></li>
+                <li class="page-item"><a class="page-link ms-2 me-2" href="#">5</a></li>
+                <li class="page-item"><a class="page-link ms-2 me-2" href="#">></a></li>
+
+                <li class="page-item">
+                    <a class="page-link ms-2 me-2" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only"></span>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        </div>
+        <div class="container-fluid">
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p style="margin-left:290px">Privacy Policy</p>
+                <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+
+
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>*@
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                    crossorigin="anonymous"></script>
+                <script src="~/js/StoryListingPage.js"></script>
+                   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="~/js/StoryListingPage.js"></script>
+
+</body>
+
+</html>

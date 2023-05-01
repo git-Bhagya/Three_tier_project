@@ -1,0 +1,240 @@
+﻿@model AdminViewModel
+
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+}
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="stylesheet" href="~/css/Datatable.css" />
+   
+@{
+    Layout = "~/Views/Admin/AdminUser.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="mt-5">Mission</h3><hr />
+        <div class="d-flex justify-content-between mt-4">
+            <div class="ps-2 pt-2">
+                 <div class="input-group rounded search-bar">
+				    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+					   aria-describedby="search-addon" id="search-bar" />
+			    </div>
+
+            </div>
+            <div>
+               
+                 <a href="@Url.Action("AddMission","Admin")" class="btn btn-login navlink buttonColor mt-2" style="border:2px solid #F88634;color: #F88634;border-radius:20px">+ Add</a>
+
+            </div>
+
+        </div>
+        <div class="table mt-4" style="overflow-x:auto;">
+            <table class="table border" id="Mission-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Mission Title</th>
+                        <th scope="col">Mission Type</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">End Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.MissionList)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.MissionType</td>
+                            <td>@item.StartDate.ToShortDateString()</td>
+                            <td>@item.EndDate.ToShortDateString()</td>
+
+                            
+                            <td class="p-0 pt-2 px-1">
+                            <a asp-action="EditMission" asp-controller="Admin" asp-route-id="@item.MissionId" class="btn navlink"><i class="bi bi-pencil-square" style="color:#f88634" @*onclick="editMission(@item.MissionId)"*@></i></a>
+                                
+                                <a class="btn" data-bs-toggle="modal" data-bs-target="#DeleteData" onclick="getMissionId(@item.MissionId)"><i class="bi bi-trash3 text-dark"></i></a>
+                                 
+                                <div class="modal fade" id="DeleteData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Are you sure to delete this data?</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-dark" style="border-radius:50px" data-bs-dismiss="modal">Cancel</button>
+                                                <button type="submit" class="btn buttonColor" style="border:2px solid #F88634;color: #F88634;border-radius:20px" onclick="DeleteMission()">Confirm Delete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </td>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+ 
+ <script>
+            //EDIT FOR MISSION
+            var missionid = 0;
+            function editMission(Id){
+            $('#missionImgs').html("");
+            $('#missionDocs').html("");
+            $.ajax({
+                url:"/Admin/EditMission",
+                method:"get",
+                data: {
+                    id:Id,
+                },
+                success : function(result){
+                    console.log(result);
+
+                    missionid = result.missionId;
+                    //$('#UserId').val(result.userid)
+                    $('#MTitle').val(result.title);
+                    $('#ShortDescription').val(result.shortDescription);
+                    $('#Descriptions').val(result.description);
+                    $('#CountryId').val(result.countryId);
+                    $('#CityId').val(result.cityId);
+                    $('#OrgNames').val(result.organizationName);
+                    $('#OrgDetail').val(result.organizationDetail);
+                    $('#Seat').val(result.availability);
+                    $('#MTheme').val(result.themeId);
+                    $('#MType').val(result.missionType);
+                    $('#SDate').val(result.startDate.slice(0, 10));
+                    $('#EDate').val(result.endDate.slice(0, 10));
+
+                },
+
+            });
+            $.ajax({
+                url:"/Admin/MissionImages",
+                method:"get",
+                data:{
+                    id:Id,
+                },
+                success:function(data){
+                    console.log(data);
+                    for(var i=0;i<data.length;i++){
+                        if(data[i].mediaType == "image"){
+                            var imageUrl = data[i].mediaPath;
+                            var img = $('<img>').attr('src',imageUrl).width(70).height(70).css('margin-right','10px');
+                            console.log(imageUrl);
+                            $('#missionImgs').append(img);
+                        }
+                        else
+                        {
+                            $('#missionVideosEdit').val(data[i].mediaPath);
+                            
+                        }
+                    }
+                },
+
+            });
+            $.ajax({
+                url:"/Admin/MissionDocuments",
+                method:"get",
+                data:{
+                    id:Id,
+                },
+                success:function(data){
+                    console.log(data);
+                    for(var i=0;i<data.length;i++){
+                            var imageUrl = data[i].documentPath;
+                            var img = $('<img>').attr('src',imageUrl).width(70).height(70).css('margin-right','10px');
+                            console.log(imageUrl);
+                            $('#missionDocs').append(img);
+                    }
+                },
+
+            });
+
+        }
+
+        
+
+        var mid = 0;
+        function getMissionId(missionid){
+            mid = missionid;
+        }
+        //delete mission
+        function DeleteMission(){
+            $.ajax({
+                url:"/Admin/DeleteMission",
+                method:"post",
+                data:{
+                    id:mid,
+                },
+                success: function(){
+                    location.reload();
+                }
+            })
+            
+        }
+
+        
+
+        //// Get the input field
+        //var input = document.getElementById("myInput");
+
+        //// Get the table and rows
+        //var table = document.getElementById("Mission-table");
+        //var rows = table.getElementsByTagName("tr");
+
+        //// Add event listener to the input field
+        //input.addEventListener("keyup", function() {
+        //    var filter = input.value.toLowerCase();
+        //    for (var i = 1; i < rows.length; i++) {
+        //        var row = rows[i];
+        //        var cells = row.getElementsByTagName("td");
+        //        var found = false;
+        //        for (var j = 0; j < cells.length; j++) {
+        //            var cell = cells[j];
+        //            if (cell.innerHTML.toLowerCase().indexOf(filter) > -1) {
+        //                found = true;
+        //                break;
+        //            }
+        //        }
+        //        if (found) {
+        //            row.style.display = "";
+        //        } else {
+        //            row.style.display = "none";
+        //        }
+        //    }
+        //});
+
+
+        $(function () {
+            $('.navlink').on('click', function (event) {
+                event.preventDefault();
+                var url = $(this).attr('href');
+                $('#loadSideBar').load(url);
+            });
+        });
+
+
+</script>
+  <script type="text/javascript">
+        $(document).ready(function () {
+        var dataTable = $('#Mission-table').DataTable({
+        "pageLength": 4,
+        });
+        $('#search-bar').keyup(function () {
+        dataTable.search(this.value).draw();
+        });
+        });
+    </script>    

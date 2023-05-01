@@ -1,0 +1,57 @@
+﻿@model AdminViewModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+</head>
+
+<body>
+    <div class="container border mt-5" style="background-color:#F8F9FC;">
+        <div class="">
+            <h4 class="fw-normal my-4 ms-2">Add</h4>
+        </div>
+    </div>
+    <form class="border border-top-0" method="post" asp-action="AddCMSPage" asp-controller="Admin">
+        <label class="ms-1 mt-3">Title</label>
+        <input type="text" class="form-control mt-2" asp-for="CMStitle" />
+        <span asp-validation-for="CMStitle" class="text-danger"></span>
+        <br />
+        <label class="ms-1">Description</label>
+        <textarea id="description" class="form-control mt-2" rows="10" asp-for="CMSdescription"></textarea>
+        <span asp-validation-for="CMSdescription" class="text-danger"></span>
+        <br />
+        <label class="ms-1">Slug</label>
+        <input type="text" class="form-control mt-2" asp-for="CMSslug" />
+        <span asp-validation-for="CMSslug" class="text-danger"></span>
+        <br />
+        <label class="ms-1">Status</label>
+        <select class="form-control mt-2" asp-for="CMSStatus">
+            <option disabled selected>Select an option </option>
+            <option>Active</option>
+            <option>In-active</option>
+        </select>
+        <span asp-validation-for="CMSStatus" class="text-danger"></span>
+        <br />
+        <div class="row d-flex justify-content-end">
+            <div class="text-end mb-3">
+                <button type="button" class="btn buttonColor rounded-5" style="color:#f88634;border:2px solid #f88634">Cancel</button>
+                <button type="submit" class="btn buttonColor rounded-5 ms-2" style="color:#f88634;border:2px solid #f88634">Save</button>
+            </div>
+        </div>
+    </form>
+    <style>
+        .buttonColor:hover{
+            color:white;
+            background-color:#f88634;
+        }
+    </style>
+
+</body>
+</html>

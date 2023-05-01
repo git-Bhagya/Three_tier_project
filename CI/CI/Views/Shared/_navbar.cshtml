@@ -1,0 +1,211 @@
+﻿@model GeneralViewModel;
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var Email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+
+}
+
+<form>
+<div class="container">
+        <nav class="navbar" id="List">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="~/images/Assets/user-img.png" class="rounded-circle" style="width:50px;height:50px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        arialeftfalse" aria-labottomnavigation">
+                    <img src="~/images/Assets/list.png">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                Policy
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                @name @surname
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar nav" id="Main">
+            <div class="col-lg-2 pt-3">
+                @*<p class="text-end">Stories</p>*@
+                <button type="submit" class="pb-3" asp-action="StoryListingPage" asp-controller="StoryListingPage" style="border:none;background:none;margin-left:180px">Stories</button>
+            </div>
+            <div class="dropdown col-lg-6 ">
+                Policy
+                <button class=" dropdown" type="button" data-bs-toggle="dropdown"
+                        style="border:none; background-color:white;">
+                    <img src="~/images/Assets/drop-down.png">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                </ul>
+
+            </div>
+            <div class="dropdown col-lg-3 text-end">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-link profile-link-part" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                        <img src="~/Assets/user-img.png" class="rounded-circle" height="35" width="35" alt="Profile pic"
+                         loading="lazy" />
+                        <span class="px-2" style="color:black">@name @surname</span>
+                        <img src="~/Assets/drop-down.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="left:auto;top:80%; z-index:1050;">
+                        <li><a class="dropdown-item btn" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item btn" href="#">My Account</a></li>
+                        <li><a class="dropdown-item btn" href="#">Help Center</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="d-flex text-decoration-none float-end" style="list-style:none">
+                        <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Login">Login</a></li>
+                        <li><a class="dropdown-item btn ms-2" asp-controller="Registration" asp-action="Registration">Register</a></li>
+                    </ul>
+                }
+            </div>
+        </nav>
+    </div>
+    </form>
+
+    <div class="container-fluid">
+        <div class="row border-top  filters-section d-flex align-items-center flex-wrap justify-content-center">
+            <div class="col-lg-2">
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 mt-2 border-end justify-content-center">
+                <div>
+                    <form asp-action="Platform" asp-controller="Home">
+                        <a href="#" style="text-decoration: none;color:gray;  background:none">
+                            <img src="~/images/Assets/search.png">
+                            <input asp-for="search" class="ms-2 me-2 border-0 bg-light" type="text" placeholder="Search Mission..."
+                                   style="border:none; width:92%;" aria-label="Search" id="search-field" onchange="this.form.submit()">
+                        </a>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Country &emsp;&ensp;<img src="~/images/Assets/drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+                        @foreach (var item in ViewBag.Countries)
+                        {
+                            <li class="form-check ms-2">
+                                <input class="form-check-input checkbox" type="checkbox" value="@item.Name">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    @item.Name
+                                </label>
+                            </li>
+                        }
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        City &emsp;&ensp;<img src="~/images/Assets/drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+
+                        @foreach (var item in ViewBag.cities)
+                        {
+                            <li class="form-check ms-2">
+                                <input class="form-check-input checkbox" type="checkbox" value="@item.Name" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    @item.Name
+                                </label>
+                            </li>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Theme &emsp;&ensp;<img src="~/images/Assets/drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+                        @foreach (var item in ViewBag.mission_theme)
+                        {
+                            <li class="form-check ms-2">
+                                <input class="form-check-input checkbox" type="checkbox" value="@item.Title" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    @item.Title
+                                </label>
+                            </li>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-3 col-sm-6  border-end border-start border-top country">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Skills &emsp;&ensp;<img src="~/images/Assets/drop-down.png">
+                    </a>
+
+                    <div class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenuLink">
+                        @foreach (var item in ViewBag.skill)
+                        {
+                            <li class="form-check ms-2">
+                                <input class="form-check-input checkbox" type="checkbox" value="@item.SkillName" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    @item.SkillName
+                                </label>
+                            </li>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+            </div>
+
+            <hr>
+        </div>
+    </div>

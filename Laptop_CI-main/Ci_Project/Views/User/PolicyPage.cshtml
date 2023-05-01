@@ -1,0 +1,243 @@
+﻿@model UserViewModel
+@using System.Security.Claims;
+@using Ci_Project.Entities.Models
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+    var uid = identity?.FindFirst(ClaimTypes.Sid)?.Value;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="~/css/PolicyPage.css" rel="stylesheet" />
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar" id="List">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    @*<img src="@Model.Users.Where(x => x.Email == email).Select(x => x.Avatar).FirstOrDefault()" class="rounded-circle" style="width:50px;height:50px">*@
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="~/images/Assets/list.png">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Story</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                Policy
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                @name @surname
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar nav" id="Main">
+            <div class="col-lg-2 pt-3">
+                <a class="nav-link text-end mb-3" asp-action="StoryListingPage" asp-controller="Story" style="text-decoration:none; color:black">Stories</a>
+            </div>
+            <div class="dropdown col-lg-6 ">
+                Policy
+                <button class=" dropdown" type="button" data-bs-toggle="dropdown"
+                        style="border:none; background-color:white;">
+                    <img src="~/images/Assets/drop-down.png">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                </ul>
+
+            </div>
+            <div class="dropdown col-lg-3 text-end">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-link profile-link-part" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                        <img src="@Model.Users.Where(x => x.Email == email).Select(x => x.Avatar).FirstOrDefault()" class="rounded-circle" height="35" width="35" alt="Profile pic"
+                         loading="lazy" />
+                        <span class="px-2" style="color:black">@name @surname</span>
+                        <img src="~/images/Assets/drop-down.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="left:auto;top:80%; z-index:1050;">
+                        <li><a class="dropdown-item btn" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item btn" href="#">My Account</a></li>
+                        <li><a class="dropdown-item btn" href="#">Help Center</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="d-flex text-decoration-none float-end" style="list-style:none">
+                        <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Login">Login</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Registration">Register</a></li>
+                    </ul>
+                }
+            </div>
+        </nav>
+    </div>
+    <hr />
+    <div class="container">
+        
+        <h3>Privacy And Cookies Policy</h3>
+        <div class="row">
+            <div class="col-lg-3 mt-3">
+                <div id="list-example" class="list-group">
+                    <a class="list " href="#list-item-1">Indroduction</a>
+                    <a class="list " href="#list-item-2">How Does Use Cookies?</a>
+                    <a class="list" href="#list-item-3">How to manage your cookie preferences?</a>
+                    <a class="list" href="#list-item-4">Subtitle goes here</a>
+                </div>
+            </div>
+            <div class="col-lg-9 mt-3">
+                 <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                <h4 id="list-item-1">Indroduction</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <br /><br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem 
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim 
+                    ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                    voluptatem sequi nesciunt. 
+                    <br /><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <h4 id="list-item-2">How Does Use Cookies?</h4>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                    ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+                    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                    nesciunt.
+
+                <h5>Why Optimy Uses These Technologies?</h5>
+                     <p> We use these technologies for a number of purposes, such as:
+                    <ul>
+                        <li>
+                            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain.
+                        </li>
+                        <li> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                            atque excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi. 
+                        </li>
+                        <li>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized</li>
+                        <li> But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</li>
+
+                    </ul>
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, 
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                    voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                    sequi nesciunt.
+                </p>
+
+                <h4 id="list-item-3">How to manage your cookie preferences?</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+                        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                        <br /><br />Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
+                        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                        adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
+                        consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel
+                        illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+       
+                <h4 id="list-item-4">Subtitle goes here</h4>
+                <p>
+                    1. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain.
+                        <br />&ensp;&ensp;   1.1. On the other hand, we denounce with righteous indignation and dislike men who are so beguiled.
+                        <br />&ensp;&ensp;   1.2. On the other hand, we denounce with  righteous indignation and dislike men who are so beguiled.<br />
+                    2. At vero eos et accusamus et iusto odio dignissimos ducimus 
+                    qui blanditiis praesentium voluptatum deleniti atque excepturi sint occaecati cupiditate non provident, similique sunt in
+                    culpa qui officia deserunt mollitia animi.<br />
+                    3. On the other hand, we denounce with righteous indignation and dislike men
+                    who are so beguiled and demoralized<br />
+                    4. But I must explain to you how all this mistaken idea of denouncing pleasure and 
+                    praising pain. <br />
+                    5. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                    dolore
+
+                    <br />
+                    <br />
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+    </div>
+            </div>
+
+        </div>
+        
+       
+     <div class="copyright mt-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#" class="text-light">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Terms of Use</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 rights">
+                    <span class="text-light"> © 2019 Optimy.com. All Right Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

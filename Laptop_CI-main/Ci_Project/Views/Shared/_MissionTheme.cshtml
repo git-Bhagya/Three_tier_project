@@ -1,0 +1,293 @@
+﻿@model AdminViewModel
+
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+}
+    @*<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>*@
+          <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>  
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+@*<link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />*@
+    <link rel="stylesheet" href="~/css/Datatable.css" />
+    @{
+    Layout = "~/Views/Admin/AdminUser.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h3 class="mt-5">Mission Theme</h3><hr />
+        <div class="d-flex justify-content-between mt-4">
+            <div class="ps-2 pt-2">
+                                    @*<input type="text" id="myInput" placeholder="Search...">*@
+                <div class="input-group rounded search-bar">
+				    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+					   aria-describedby="search-addon" id="search-bar" />
+			    </div>
+            </div>
+            <div>
+                <form method="post" asp-controller="Admin" asp-action="GetThemeAdd">
+                    <div>
+                        <a class="btn btn-login buttonColor mt-2" data-bs-toggle="modal" data-bs-target="#ThemeAdd" style="border:2px solid #F88634;color: #F88634;border-radius:20px">+ Add</a>
+                        <!-- Button trigger modal -->
+                        @*<button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModalGoal" style="border-radius: 50px;">
+                            + Add
+                            </button>*@
+                        <div class="modal fade" id="ThemeAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Add Mission Theme</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Mission Theme title</label>
+                                            <input type="text" class="form-control" asp-for="ThemeTitle">
+                                            <span asp-validation-for="ThemeTitle" class="text-danger"></span>
+                                        </div>
+                                        @*<div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Mission Theme Status</label>
+                                            <input type="text" class="form-control" asp-for="ThemeStatus">
+                                            <span asp-validation-for="ThemeStatus" class="text-danger"></span>
+                                        </div>*@
+                                         <label class="ms-1">Status</label>
+                                        <select class="form-control mt-2" asp-for="ThemeStatus">
+                                            <option disabled selected>Select an option </option>
+                                            <option>Active</option>
+                                            <option>In-active</option>
+                                        </select>
+                                        <span asp-validation-for="ThemeStatus" class="text-danger"></span>
+                                        
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-dark" style="border-radius:50px" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn buttonColor" style="border:2px solid #F88634;color: #F88634;border-radius:20px">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="table mt-4" style="overflow-x:auto;">
+            <table class="table border" id="theme-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Mission Theme id</th>
+                        <th scope="col">Mission Theme Title</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Create At</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.MissionThemeList)
+                    {
+                        <tr>
+                            <td>@item.MissionThemeId</td>
+                            <td>@item.Title</td>
+                            @if (@item.Status == "Active")
+                            {
+                                <td class="text-success">@item.Status</td>
+                            }
+                            else
+                            {
+                                <td class="text-danger">@item.Status</td>
+                            }
+                            <td>@item.CreatedAt.ToShortDateString()</td>
+
+                                <td class="p-0 pt-2 px-1">
+                                    @*<form method="post" asp-action="EditTheme" asp-controller="Admin">*@
+
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#editTheme" class="border-0 bg-transparent" onclick="editMissionTheme(@item.MissionThemeId)">
+                                        <i class="bi bi-pencil-square" style="color:#f88634"></i>
+                                    </button>
+                                    <div class="modal fade" id="editTheme" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            @*<form id="themeValidation">*@
+                                            <div class="modal-content">
+                                                <form id="theme">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Edit Mission Data </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput1" class="form-label">Mission Theme Id</label>
+                                                            <input type="text" class="form-control" id="Tid" disabled>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput1" class="form-label">Mission Theme Title</label>
+                                                            <input type="text" class="form-control" id="TTitle" asp-for="ThemeTitle">
+                                                            <span asp-validation-for="ThemeTitle" class="text-danger"></span>
+                                                        </div>
+                                                        @*<div class="mb-3">
+                                                            <label for="exampleFormControlInput1" class="form-label">Theme Status</label>
+                                                            <input type="text" class="form-control" id="TStatus" asp-for="ThemeStatus">
+                                                            <span asp-validation-for="ThemeStatus" class="text-danger"></span>
+                                                        </div>*@
+                                                        <label class="ms-1">Status</label>
+                                                        <select class="form-control mt-2" id="TStatus">
+                                                            <option disabled selected>Select an option </option>
+                                                            <option>Active</option>
+                                                            <option>In-active</option>
+                                                        </select>
+                                                        <div class="mb-3">
+                                                            <label for="exampleFormControlInput1" class="form-label">Create Date</label>
+                                                            <input type="date" class="form-control actionEdit" id="TDate" disabled>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-dark" style="border-radius:50px" data-bs-dismiss="modal">Cancel</button>
+                                                        <button type="submit" class="btn buttonColor" style="border-radius:50px;color:#f88634;border:2px solid #f88634" onclick="saveChangesTheme()">Save</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    @*</form>*@
+                                    <a class="btn" data-bs-toggle="modal" data-bs-target="#DeleteTheme" onclick="getMissionThemeId(@item.MissionThemeId)"><i class="bi bi-trash3 text-dark"></i></a>
+                                        @*<a class="btn btn-login buttonColor mt-2" data-bs-toggle="modal" data-bs-target="#DeleteData" style="border:2px solid #F88634;color: #F88634;border-radius:20px">+ Add</a>*@
+                                    <!-- Button trigger modal -->
+                                        @*<button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModalGoal" style="border-radius: 50px;">
+                                            + Add
+                                            </button>*@
+                                    <div class="modal fade" id="DeleteTheme" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Are you sure to delete this data?</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-dark" style="border-radius:50px" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="submit" class="btn buttonColor" style="border:2px solid #F88634;color: #F88634;border-radius:20px" onclick="DeleteTheme()">Confirm Delete</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+ <script>
+            //EDIT FOR MISSION
+            var missionThemeId = 0;
+            function editMissionTheme(Id){
+
+                $.ajax({
+                    url:"/Admin/EditMissionTheme",
+                    method:"post",
+                    data: {
+                        id:Id,
+                    },
+                    success : function(result){
+                        console.log(result);
+
+                        missionThemeId = result.missionThemeId;
+                        //$('#UserId').val(result.userid)
+                        $('#Tid').val(result.missionThemeId);
+                        $('#TTitle').val(result.title);
+                        $('#TStatus').val(result.status);
+                        $('#TDate').val(result.createdAt.slice(0, 10));
+                    }
+
+                })
+
+        }
+
+        //edit and update for both
+        //function saveChangesTheme(){
+        function saveChangesTheme(){
+            
+            $.ajax({
+                url : "/Admin/EditMissionThemeData",
+                method : "POST",
+                data:{
+                    id:missionThemeId,
+                    tTitle:$('#TTitle').val(),
+                    tStatus:$('#TStatus').val(),
+                },
+                success: function(){
+                    location.reload();
+                }
+            });
+            
+        } 
+
+        var Tid = 0;
+        function getMissionThemeId(missionThemeId){
+            Tid = missionThemeId;
+        }
+        //delete mission
+        function DeleteTheme(){
+            $.ajax({
+                url:"/Admin/DeleteTheme",
+                method:"post",
+                data:{
+                    id:Tid,
+                },
+                success: function(){
+                    location.reload();
+                }
+            })
+            
+        }
+
+        // Get the input field
+        var input = document.getElementById("myInput");
+
+        // Get the table and rows
+        var table = document.getElementById("theme-table");
+        var rows = table.getElementsByTagName("tr");
+
+        // Add event listener to the input field
+        input.addEventListener("keyup", function() {
+            var filter = input.value.toLowerCase();
+            for (var i = 1; i < rows.length; i++) {
+                var row = rows[i];
+                var cells = row.getElementsByTagName("td");
+                var found = false;
+                for (var j = 0; j < cells.length; j++) {
+                    var cell = cells[j];
+                    if (cell.innerHTML.toLowerCase().indexOf(filter) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            }
+        });
+</script>
+   <script type="text/javascript">
+            $(document).ready(function () {
+            var dataTable = $('#theme-table').DataTable({
+            "pageLength": 4,
+            });
+            $('#search-bar').keyup(function () {
+            dataTable.search(this.value).draw();
+            });
+            });
+        </script>       

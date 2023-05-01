@@ -1,0 +1,156 @@
+﻿@model AdminViewModel
+
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+}
+@*<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>*@
+@*    <link rel="stylesheet" href="~/css/Datatable.css" />
+    <link rel="stylesheet" href="//cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" />*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>  
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="stylesheet" href="~/css/Datatable.css" />
+    @{
+    Layout = "~/Views/Admin/AdminUser.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        @* <div class="row" id="loadSideBar">
+            @await Html.PartialAsync("~/Views/Shared/_User.cshtml")
+            </div>*@
+        <h3 class="mt-5">Mission Application</h3><hr />
+        <div class="d-flex justify-content-between mt-4">
+            <div class="ps-2 pt-2">
+                @*<input type="text" id="myInput" placeholder="Search...">*@
+                <div class="input-group rounded search-bar">
+				    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+					   aria-describedby="search-addon" id="search-bar" />
+			    </div>
+
+            </div>
+           
+
+        </div>
+        <div class="table mt-4" style="overflow-x:auto;">
+            <table class="table border" id="app-table">
+                <thead>
+                    <tr>
+                        <th scope="col">MissionApplication Id</th>
+                        <th scope="col">Mission Id</th>
+                        <th scope="col">User Id</th>
+                        <th scope="col">User Name</th>
+                        <th scope="col">Approval Status</th>
+                        <th scope="col">Applied Date</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.MissionApplicationList)
+                    {
+                        <tr>
+                            <td>@item.MissionApplicationId</td>
+                            <td>@item.MissionId</td>
+                            <td>@item.UserId</td>
+                            <td>@item.User.FirstName @item.User.LastName</td>
+                            @if (@item.ApprovalStatus == "Approved")
+                            {
+                                <td class="text-success">@item.ApprovalStatus</td>
+                            }
+                            else if (@item.ApprovalStatus == "Rejected")
+                            {
+                                <td class="text-danger">@item.ApprovalStatus</td>
+                            }
+                            else
+                            {
+                                <td class="text-warning">@item.ApprovalStatus</td>
+                            }
+
+                            <td>@item.AppliedAt.ToShortDateString()</td>
+                            <td>
+                                @if (@item.ApprovalStatus == "Approved")
+                                {
+                                    <a class="btn rounded-pill disabled" onclick="checked(@item.MissionApplicationId)" style="border:none;">
+                                        <i class="fa-regular fa-circle-check text-success"></i>
+                                    </a>
+                                    <a class="btn text-danger rounded-pill" onclick="cancel(@item.MissionApplicationId)">
+                                        <i class="fa-regular fa-xmark fa-circle-xmark text-danger"></i>
+                                    </a>
+                                }
+                                else if (@item.ApprovalStatus == "Rejected")
+                                {
+                                    <a class="btn rounded-pill" onclick="checked(@item.MissionApplicationId)">
+                                        <i class="fa-regular fa-circle-check text-success"></i>
+                                    </a>
+                                    <a class="btn text-danger rounded-pill disabled" onclick="cancel(@item.MissionApplicationId)"  style="border:none;">
+                                        <i class="fa-regular fa-xmark fa-circle-xmark text-danger"></i>
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a class="btn rounded-pill" onclick="checked(@item.MissionApplicationId)">
+                                        <i class="fa-regular fa-circle-check text-success"></i>
+                                    </a>
+                                    <a class="btn text-danger rounded-pill" onclick="cancel(@item.MissionApplicationId)">
+                                        <i class="fa-regular fa-xmark fa-circle-xmark text-danger"></i>
+                                    </a>
+                                    
+                                }
+
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    //approved
+    function checked(mid){
+        $.ajax({
+            url:"/Admin/Checked",
+            method:"post",
+            data:{
+                id:mid,
+                email:"@email",
+            },
+            success: function(){
+                location.reload();
+            }
+        })
+    }
+
+    //cancel
+    function cancel(mid){
+        $.ajax({
+            url:"/Admin/cancel",
+            method:"post",
+            data:{
+                id:mid,
+                email:"@email",
+            },
+            success: function(){
+                location.reload();
+            }
+        })
+    }
+
+   
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+    var dataTable = $('#app-table').DataTable({
+    "pageLength": 4,
+    });
+    $('#search-bar').keyup(function () {
+    dataTable.search(this.value).draw();
+    });
+    });
+</script> 

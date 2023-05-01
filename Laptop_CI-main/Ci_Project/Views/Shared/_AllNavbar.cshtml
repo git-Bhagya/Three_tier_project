@@ -1,0 +1,107 @@
+﻿@model GeneralViewModel
+
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var Email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+    var uid = identity?.FindFirst(ClaimTypes.Sid)?.Value;
+}
+
+<div class="container">
+        <nav class="navbar" id="List">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="@Model.Users.Where(x => x.Email == Email).Select(x => x.Avatar).FirstOrDefault()" class="rounded-circle" style="width:50px;height:50px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        arialeftfalse" aria-labottomnavigation">
+                    <img src="~/images/Assets/list.png">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                Policy
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="PolicyPage">PolicyPage</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                @name @surname
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>      
+        <nav class="navbar nav" id="Main">
+            <div class="col-lg-2">
+                @*<p class="text-end">Stories</p>*@
+                <a class="btn" type="submit" class="pb-3" asp-action="StoryListingPage" asp-controller="Story" style="border:none;background:none;margin-left:180px">Stories</a>
+            </div>
+            <div class="dropdown col-lg-6 ">
+                Policy
+                <button class=" dropdown" type="button" data-bs-toggle="dropdown"
+                        style="border:none; background-color:white;">
+                    <img src="~/images/Assets/drop-down.png">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" asp-controller="User" asp-action="PolicyPage">PolicyPage</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                </ul>
+
+            </div>
+            <div class="dropdown col-lg-3 text-end">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-link profile-link-part" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                        <img src="@Model.Users.Where(x => x.Email == Email).Select(x => x.Avatar).FirstOrDefault()" class="rounded-circle" height="35" width="35" alt="Profile pic"
+                         loading="lazy" />
+                        <span class="px-2" style="color:black">@name @surname</span>
+                        <img src="~/Assets/drop-down.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="left:auto;top:80%; z-index:1050;">
+                        <li><a class="dropdown-item btn" asp-controller="Admin" asp-action="AdminUser">Admin Page</a></li>
+
+                        <li><a class="dropdown-item btn" asp-controller="User" asp-action="UserProfile">My Account</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="User" asp-action="VolunteerTimesheet">Volunteer TimeSheet</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="d-flex text-decoration-none float-end" style="list-style:none">
+                        <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Login">Login</a></li>
+                        <li><a class="dropdown-item btn ms-2" asp-controller="Registration" asp-action="Registration">Register</a></li>
+                    </ul>
+                }
+            </div>
+        </nav>
+    </div>
+    
+    <hr>

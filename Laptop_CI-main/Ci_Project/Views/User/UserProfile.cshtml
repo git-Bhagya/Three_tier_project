@@ -1,0 +1,626 @@
+﻿@model UserViewModel
+@using System.Security.Claims;
+@using Ci_Project.Entities.Models
+@*@using CI_Project.Entities.ViewModels;*@
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+
+    //var Email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+    var uid = identity?.FindFirst(ClaimTypes.Sid)?.Value;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="~/css/UserProfile.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="~/js/UserProfile.js"></script>
+    <title>Document</title>
+
+</head>
+<body>
+
+    <div class="container">
+        <nav class="navbar" id="List">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="@Model.Users.Where(x => x.Email == email).Select(x => x.Avatar).FirstOrDefault()" class="rounded-circle" style="width:50px;height:50px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="~/images/Assets/list.png">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Story</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                Policy
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                @name @surname
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar nav" id="Main">
+            <div class="col-lg-2 pt-3">
+                <a class="nav-link text-end mb-3" asp-action="StoryListingPage" asp-controller="Story" style="text-decoration:none; color:black">Stories</a>
+            </div>
+            <div class="dropdown col-lg-6 ">
+                Policy
+                <button class=" dropdown" type="button" data-bs-toggle="dropdown"
+                        style="border:none; background-color:white;">
+                    <img src="~/images/Assets/drop-down.png">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                </ul>
+
+            </div>
+            <div class="dropdown col-lg-3 text-end">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-link profile-link-part" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                        <img src="@Model.Users.Where(x => x.Email == email).Select(x => x.Avatar).FirstOrDefault()" class="rounded-circle" height="35" width="35" alt="Profile pic"
+                         loading="lazy" />
+                        <span class="px-2" style="color:black">@name @surname</span>
+                        <img src="~/images/Assets/drop-down.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="left:auto;top:80%; z-index:1050;">
+                        <li><a class="dropdown-item btn" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item btn" href="#">My Account</a></li>
+                        <li><a class="dropdown-item btn" href="#">Help Center</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="d-flex text-decoration-none float-end" style="list-style:none">
+                        <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Login">Login</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Registration">Register</a></li>
+                    </ul>
+                }
+            </div>
+        </nav>
+    </div>
+    <hr />
+    <!-- Navbar end-->
+    <!--Second row is all about user profile photo and profile detail start-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 mt-3 text-center mt-5">
+
+                <div class="userProfileImg">
+                    @{
+                        <img src="@Model.Avatar" alt=""
+                             style="width: 150px; height: 150px; border-radius: 50%;" />
+
+                        <i class="fa-regular fa-pen-to-square" style="color:#f88634;" id="show"></i>
+                        <dialog id="myDialog" class="align-content-center">
+                            <center><h4 class="m-3">Change my Avatar</h4></center>
+                            <input type="file" asp-for="Avatar" accept="image/*" id="file-input" />
+                            <div id="image-preview"></div>
+                            <div class="d-flex mt-2 justify-content-center">
+                                <a class="btn btn-outline-primary m-2" onclick="changeLogo()">Upload</a>
+                                <button class="btn btn-outline-danger m-2" id="hide">Close</button>
+                            </div>
+                        </dialog>
+
+                    }
+                </div>
+                <div class="userName">
+                    <h3>@name @surname</h3>
+                </div>
+                <div>
+                    <button type="button" class="btn buttonColor" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 50px;border:2px solid #f88634;color:#f88634">
+                        Change Password
+                    </button>
+                    @*<a class="btn btn-login buttonColor" id="save-skills" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border:2px solid #F88634;color: #F88634;border-radius:20px">Change Password</a>*@
+
+
+                    <!-- Modal -->
+                     <h5 class="text-danger">@TempData["Errors"]</h5>
+                     <h5 class="text-success">@TempData["success"]</h5>
+
+                    <form method="post" asp-action="changePassword" asp-controller="User">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Select Your Skills</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Enter your old password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" asp-for="OldPwd" required>
+                                            <span asp-validation-for="OldPwd" class="text-danger"></span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Enter your new password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" asp-for="NewPwd" required>
+                                            <span asp-validation-for="NewPwd" class="text-danger"></span>
+
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputPassword1" class="form-label">Enter confirm password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" asp-for="ComPwd" required>
+                                            <span asp-validation-for="ComPwd" class="text-danger"></span>
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-dark" style="border-radius:50px" data-bs-dismiss="modal">Cancel</button>
+                                        <button type="submit" class="btn buttonColor" style="border-radius:50px;color: #F88634;border-radius:20px;border:2px solid #F88634">">Save</button>
+                                        @*<a class="btn btn-login buttonColor mt-2" style="border:2px solid #F88634;color: #F88634;border-radius:20px">save</a>*@
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-8 mt-3">
+                <div class="title">
+                    <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active mission" id="home-tab0" data-bs-toggle="tab"
+                                    data-bs-target="#home0" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                <h2 class="heading">Basic Information </h2>
+                            </button>
+                        </li>
+                    </ul>
+
+                </div>
+                <form method="post" asp-controller="User" asp-action="SaveDetails">
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4" class="form-label"> Name</label>
+                            <input type="text" asp-for="Name" class="form-control" placeholder="Enter Your First name" aria-label="First name">
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4" class="form-label">Surname</label>
+                            <input type="text" asp-for="Surname" class="form-control" placeholder="Enter Your Surname" aria-label="Last name">
+                            <span asp-validation-for="Surname" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label for="inputEmail4" class="form-label">Employee Id</label>
+                            <input type="text" class="form-control" asp-for="EmployeeId" placeholder="Enter Your Employee Id"
+                                   aria-label="Enter your employee Id">
+                            <span asp-validation-for="EmployeeId" class="text-danger"></span>
+
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4" class="form-label">Manager</label>
+                            <input type="text" class="form-control" asp-for="Manager" placeholder="Enter your manager detail"
+                                   aria-label="Enter your manager detail">
+                            <span asp-validation-for="Manager" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <label for="inputEmail4" class="form-label">Title</label>
+                            <input type="text" class="form-control" asp-for="Title" placeholder="Enter Title"
+                                   aria-label="Enter your title">
+                            <span asp-validation-for="Title" class="text-danger"></span>
+
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4" class="form-label">Department</label>
+                            <input type="text" class="form-control" asp-for="Department" placeholder="Enter Department name"
+                                   aria-label="Enter your department">
+                            <span asp-validation-for="Department" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">My Profile</label>
+                            <textarea class="form-control" asp-for="ProfileText" placeholder="Enter Your comments" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <span asp-validation-for="ProfileText" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Why I Volunteer??</label>
+                            <textarea class="form-control" asp-for="WhyIVolunteer" placeholder="Enter Your comments" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <span asp-validation-for="WhyIVolunteer" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="addressInformation">
+                            <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active mission" id="home-tab0" data-bs-toggle="tab"
+                                            data-bs-target="#home0" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                        <h3 class="heading">Address Information</h3>
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Country</label>
+                            <select id="Country" class="form-select" asp-for="countryId">
+                                @{
+                                    var countryId = Model.Users.Where(country => country.UserId == Convert.ToInt32(uid)).Select(country => country.CountryId).FirstOrDefault();
+                                    if (countryId == null)
+                                    {
+                                        <option selected>Select Your Country</option>
+
+                                    }
+                                    else
+                                    {
+                                        foreach (var item in Model.Countries)
+                                        {
+                                            if (item.CountryId == countryId)
+                                            {
+                                                <option selected>@item.Name</option>
+
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">City</label>
+                            <select id="City" class="form-select" asp-for="cityId">
+                                @{
+                                    var cityId = Model.Users.Where(city => city.UserId == Convert.ToInt32(uid)).Select(city => city.CityId).FirstOrDefault();
+                                    if (cityId == null)
+                                    {
+                                        <option selected>Select Your city</option>
+
+                                    }
+                                    else
+                                    {
+                                        foreach (var item in Model.Cities)
+                                        {
+                                            if (item.CityId == cityId)
+                                            {
+                                                <option selected>@item.Name</option>
+
+                                            }
+                                        }
+
+                                    }
+                                }
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="addressInformation">
+                            <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active mission" id="home-tab0" data-bs-toggle="tab"
+                                            data-bs-target="#home0" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                        <h3 class="heading">Professional Information</h3>
+                                    </button>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="inputState" class="form-label">Availabilty</label>
+                            <select id="inputState" class="form-select">
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputCity" class="form-label">LinkedIn</label>
+                            <input type="text" class="form-control" id="inputCity" placeholder="Enter linkedIn URL" asp-for="LinkedInURL">
+                            <span asp-validation-for="LinkedInURL" class="text-danger"></span>
+
+                        </div>
+                    </div>
+                  
+                    <div class="mySkills mb-5">
+                        <h3 class="border-bottom pb-3 mb-3">My Skills</h3>
+                        <div class="border px-3 py-2 p mt-4 d-flex flex-column" id="selected-skills" name="selectedSkills">
+                        </div>
+                        <div hidden>
+                            <ul id="user-skills">
+                                @{
+                                    var userSkill = Model.UserSkills;
+                                    @foreach (var skills in Model.SkillList.Where(skill => userSkill.Any(us => us.SkillId == skill.SkillId)))
+                                    {
+                                        <li value="@skills.SkillId">@skills.SkillName</li>
+                                    }
+                                }
+
+                            </ul>
+                        </div>
+
+                        <a class="btn rounded-5 mt-3 border bg-white px-3" data-bs-toggle="modal" data-bs-target="#add-skills">Add Skills</a>
+                        <div class="modal fade" id="add-skills" tabindex="-1" aria-labelledby="e" aria-hidden="true">
+                            <div class="modal-dialog modal-xl modal-dialog-scrollable" id="modal-dialog">
+                                <div class="modal-content">
+                                    <div id="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="">Add Your Skills</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <br />
+                                                <div class="row">
+                                                    <div class="dual-list list-left col-lg-5 col-12">
+                                                        <div class="well text-right">
+                                                            <div>
+                                                                <h5 class="mb-2 mt-3 fw-bold border p-2 shadow-sm rounded">Available Skills</h5>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="input-group d-flex align-items-center position-relative">
+                                                                        <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                                                                        <i class="bi bi-search px-2 search-icon position-absolute"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="list-group w-100" id="available" multiple>
+
+                                                                @foreach (Skill skills in @Model.SkillList)
+                                                                {
+                                                                    <li class="list-group-item" value="@skills.SkillId">@skills.SkillName</li>
+                                                                }
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="list-arrows col-lg-1 col-12">
+                                                        <a class="btn btn-default btn-sm move-right">
+                                                            <i class="bi bi-caret-right-fill"></i>
+                                                        </a>
+                                                        <a class="btn btn-default btn-sm move-left">
+                                                            <i class="bi bi-caret-left-fill"></i>
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="dual-list list-right col-lg-5 col-12">
+                                                        <div class="well">
+                                                            <div>
+                                                                <h5 class="mb-2 mt-3 fw-bold border p-2 shadow-sm rounded">Selected Skills</h5>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="input-group d-flex align-items-center position-relative">
+                                                                        <input type="text" name="SearchDualList" class="form-control" placeholder="search" />
+                                                                        <i class="bi bi-search px-2 search-icon position-absolute"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="list-group w-100" id="selected" multiple>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn border " data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="btn border-warning text-warning " onclick="" id="save-skills">Save</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-none w-100 text-center" id="volPageLoader">
+                                        <div class="spinner-border text-warning" role="status">
+                                        </div>
+                                        <p>Sending Mail...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="skillBtn">
+                            <button type="submit" class="btn btn-login buttonColor mt-2 px-4 float-end" style="border:2px solid #F88634;color: #F88634;border-radius:20px">save</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <!--Second row is all about user profile photo and profile detail end-->
+    <!--footer satrt-->
+    <div class="copyright mt-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a class="text-light" asp-controller="User" asp-action="PolicyPage">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Cookie Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">Terms of Use</a>
+                            </li>
+
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 rights">
+                    <span class="text-light"> © 2019 Optimy.com. All Right Reserved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer end-->
+
+
+    <script>
+        // Skill Section Start
+
+        </script>
+
+
+
+    <script>
+        function save(){
+            const SkillSelect = [];
+            const skills = document.getElementById('selected-skills');
+            const skill_tag = skills.getElementsByTagName("small");
+            console.log(skill_tag);
+            for(let i=0 ; i < skill_tag.length ; i++){
+                const skillList = skill_tag[i].textContent;
+                SkillSelect.push(skillList);
+            }
+            console.log(SkillSelect);
+            $.ajax({
+                url:"/User/SaveSkills",
+                type:"POST",
+                data:{
+                    'skills': SkillSelect
+                },
+                success: function(){
+                    location.reload();
+                },
+            });
+        }
+
+
+    </script>
+    <script>
+        //User Profile Image
+        var dialog = document.getElementById('myDialog');
+        document.getElementById('show').onclick = function() { dialog.showModal(); };
+        document.getElementById('hide').onclick = function() { dialog.close(); };
+
+        function changeLogo(){
+            const imagePaths = [];
+            const images = document.getElementById('image-preview');
+            const image_tag = images.getElementsByTagName("img");
+            console.log(image_tag)
+
+            for (let i = 0; i < image_tag.length; i++) {
+            const image = image_tag[i].getAttribute("src");
+            imagePaths.push(image);
+            }
+            $.ajax({
+                url: "/User/changelogo",
+                type: "POST",
+                data:{
+                    'image': imagePaths
+                },
+                success: function(){
+                    alert("Profile picture updated");
+                    location.reload();
+                },
+            })
+        }
+    </script>
+    <script>
+        //city and country
+        getCountry();
+        $('#City').attr('disabled', true);
+        $('#Country').change(function () {
+            $('#City').empty();
+            $('#City').append('<option>Select City</option>')
+            $('#City').attr('disabled', false);
+            var countryId = $('#Country	').val();
+            $.ajax({
+                url: '/User/getCityList',
+                data: {
+                    id: countryId,
+                },
+                type: "POST",
+                success: function (result) {
+                    $.each(result, function (i, data) {
+                        $('#City').append('<option value=' + data.cityId + '>' + data.name + '</option>')
+                    })
+
+                }
+            })
+        })
+
+        function getCountry() {
+            $.ajax({
+                url: '/User/getCountryList',
+                type: 'POST',
+                success: function (result) {
+                    $.each(result, function (i, data) {
+                        $('#Country').append('<option value=' + data.countryId + '>' + data.name + '</option>');
+                    })
+                },
+            })
+        }
+
+    </script>
+  
+
+
+
+</body>
+</html>

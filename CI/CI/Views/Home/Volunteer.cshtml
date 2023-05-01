@@ -1,0 +1,1014 @@
+﻿@{
+    ViewData["Title"] = "Volunteering Mission Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model GeneralViewModel
+
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var Email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+    var uid = identity?.FindFirst(ClaimTypes.Sid)?.Value;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/Volunteer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <title>Volunteer</title>
+</head>
+
+<body>
+
+    @*<partial name="_navbar.cshtml"></partial>*@
+    @*<partial name="_navbar" />*@
+    <form asp-controller="Home"  asp-action="Volunteer">
+    <div class="container">
+        
+        <nav class="navbar" id="List">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="~/images/Assets/user-img.png" class="rounded-circle" style="width:50px;height:50px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <img src="~/images/Assets/list.png">
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Story</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                                   style="text-decoration: none; color: #333333;">
+                                    Policy
+                                    <img src="~/images/Assets/drop-down.png">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">1</a></li>
+                                    <li><a class="dropdown-item" href="#">2</a></li>
+                                    <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                                   style="text-decoration: none; color: #333333;">
+                                    @name @surname
+                                    <img src="~/images/Assets/drop-down.png">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">1</a></li>
+                                    <li><a class="dropdown-item" href="#">2</a></li>
+                                    <li><a class="dropdown-item" href="#">3</a></li>
+                                </ul>
+
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        <nav class="navbar nav" id="Main">
+                <div class="col-lg-2 pt-3">
+                    <button type="submit" class="pb-3" asp-action="StoryListingPage" asp-controller="StoryListingPage" style="border:none;background:none;margin-left:180px">Stories</button>
+                </div>
+                <div class="dropdown col-lg-6 ">
+                    Policy
+                    <button class=" dropdown" type="button" data-bs-toggle="dropdown"
+                            style="border:none; background-color:white;">
+                        <img src="~/images/Assets/drop-down.png">
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">1</a></li>
+                        <li><a class="dropdown-item" href="#">2</a></li>
+                        <li><a class="dropdown-item" href="#">3</a></li>
+                    </ul>
+
+                </div>
+                <div class="dropdown col-lg-3 text-end">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="nav-link profile-link-part" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                            <img src="~/Assets/user-img.png" class="rounded-circle" height="35" width="35" alt="Profile pic"
+                             loading="lazy" />
+                            <span class="px-2" style="color:black">@name @surname</span>
+                            <img src="~/Assets/drop-down.png" alt="">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="left:auto;top:80%; z-index:1050;">
+                            <li><a class="dropdown-item btn" href="#">Dashboard</a></li>
+                            <li><a class="dropdown-item btn" href="#">My Account</a></li>
+                            <li><a class="dropdown-item btn" href="#">Help Center</a></li>
+                            <li><a class="dropdown-item btn" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul class="d-flex text-decoration-none float-end" style="list-style:none">
+                            <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Login">Login</a></li>
+                            <li><a class="dropdown-item btn ms-3" asp-controller="Registration" asp-action="Registration">Register</a></li>
+                        </ul>
+                    }
+                </div>
+            </nav>
+    </div>
+    
+    <hr>
+
+        <div class="container">
+            <div class="d-flex mt-5">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="container h-100">
+                            <div class="" style="height:80%">
+                                <!-- Full-width images with number text -->
+                                <div class="mySlides  h-100">
+                                    <img src="~/images/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png"
+                                        style="width:100%"  class="h-100">
+                                </div>
+                                <div class="mySlides h-100">
+                                        <img src="~/images/Assets/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                            style="width:100%"  class="h-100">
+                                </div>
+                                <div class="mySlides h-100">
+                                    <img src="~/images/Assets/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                        style="width:100%"  class="h-100">
+                                </div>
+                                <div class="mySlides h-100">
+                                     <img src="~/images/Assets/img33.png" style="width:100%"  class="h-100">
+                                </div>
+                                <div class="mySlides h-100">
+                                    <img src="~/images/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png"
+                                        style="width:100%"  class="h-100">
+                                </div>
+                                <div class="mySlides h-100">
+                                    <img src="~/images/Assets/img33.png" style="width:100%"  class="h-100">
+                                </div> 
+                                <!-- Next and previous buttons -->
+                                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                <a class="next" onclick="plusSlides(1)">&#10095;</a>       
+                            </div>
+                                <!-- Thumbnail images -->
+                            <div class="row mt-2" style="height:15%">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <img class="demo cursor"
+                                        src="~/images/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity-4.png"
+                                        style="width:100%" onclick="currentSlide(1)" alt="The Woods"  class="h-100">
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <img class="demo cursor" src="~/images/Assets/img3.png" style="width:100%"
+                                        onclick="currentSlide(2)" alt="Cinque Terre"  class="h-100">
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <img class="demo cursor"
+                                        src="~/images/Assets/Grow-Trees-On-the-path-to-environment-sustainability-5.png"
+                                        style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords"  class="h-100">
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <img class="demo cursor" src="~/images/Assets/img33.png" style="width:100%"
+                                        onclick="currentSlide(4)" alt="Northern Lights"  class="h-100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <h3>@Model.mission_details.Title</h3>
+                        <p>@Model.mission_details.Description</p>
+
+                        <div class="border-top mt-4">
+                            @if (Model.mission_details.MissionType == "Goal")
+                            {
+                                <div>
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <div class="star">
+                                            <p class="text-center"
+                                                style="border: 1px solid gray;border-radius:20px;padding:3px 15px 3px 15px ;">
+                                                Plant 10,000 Trees
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div>
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <div class="star">
+                                            <p class="text-center" style="border: 1px solid gray;border-radius:20px;padding:0px 15px 0px 15px ;">
+                                                From 
+                                                @Model.mission_details.StartDate.Value.ToShortDateString() until
+                                                @Model.mission_details.EndDate.Value.ToShortDateString()  
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="col-lg-4 col-sm-4">
+                                <div class="row">
+                                    <div class="col-lg-2 col-sm-2 col-2">
+                                        <img src="~/images/Assets/Seats-left.png" alt="">
+                                    </div>
+                                    <div class="col-lg-9 col-sm-10">
+                                        <p>@Model.mission_details.Availability <br> Seats Left</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-sm-5 col-5">
+                                <div class="d-flex">
+                                    <div class="col-lg-2 col-sm-2 ">
+                                        <img src="~/images/Assets/Achieved.png" alt="">
+                                    </div>
+                                    <div class="col-lg-10 col-sm-10">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar"
+                                                    style="width: 75%;background-color: #F88634;" aria-valuenow="75"
+                                               aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <br> 8000 Achieved
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mt-4">
+                            <div class="col-lg-6 col-12 text-center">
+                                @*add to fav*@
+                                @if(User.Identity.IsAuthenticated){
+                                    @if (Model.FavoriteMissions.Where(x => x.UserId == (Model.Users.Where(x => x.Email == Email).Select(x => x.UserId).FirstOrDefault()) &&
+                                        x.MissionId == Model.mission_details.MissionId).Count() == 1)
+                                        {
+                                        <div class="btn">
+                                        <button type="submit" onclick="fav()" class="Recommend ms-4"><i class="bi bi-heart-fill text-danger pe-2"></i>Remove From
+                                            favorite
+                                        </button>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="btn">
+                                        <button type="submit" onclick="fav()" class="Recommend ms-4"><i class="bi bi-heart pe-2"></i>Add to Favorite
+                                        </button>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <button class="favorite"><img src="~/Assets/heart1.png" alt="">Add To
+                                        Favorite
+                                    </button>
+                                }
+                            </div>
+                            <div class="col-lg-6 col-11 text-center"> 
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <div class="btn">
+                                        @*recommended*@
+                                        <button id="show" type="button" class="Recommend ms-4"><img src="~/Assets/add1.png" />Recommended To Co-Worker
+                                        </button>
+                                        <dialog id="myDialog">
+                                            <ul>
+                                                @foreach (var n in Model.Users)
+                                                {
+                                                    if (n.Email != Email)
+                                                    {
+                                                        <li class="form-check">
+                                                            <input type="checkbox" value="@n.UserId" id="check">
+                                                            <label class="form-check-label" for="to">
+                                                                @n.FirstName &emsp; @n.LastName
+                                                            </label>
+                                                        </li>
+                                                    }
+                                                }
+                                            </ul>
+                                            <button class="form-control btn btn-outline-primary m-2" onclick="recommend(@Model.mission_details.MissionId)">Send an email</button>
+                                            <button class="form-control btn btn-outline-danger m-2" id="hide">Close</button>
+                                        </dialog>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <button class="Recommend ms-4"><img src="~/Assets/add1.png" alt="">Recommend to
+                                        co-worker
+                                    </button>
+                                }
+
+                            </div>
+                        </div>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="border-top mt-4">
+                                <div>
+                                    @*rating*@
+                                    <div class="d-flex border-top position-relative justify-content-center">
+                                        <div class="" id="rating" style="transform: translateY(-15px); background-color:white" onmouseout="CRateSelected()">
+                                            <img class="rating-star" id="span1" onmouseout='CRateOut(1)' onmouseover='CRateOver(1)' onclick='CRateClick(1)' src="~/Assets/star.png" alt="">
+                                            <img class="rating-star" id="span2" onmouseout='CRateOut(2)' onmouseover='CRateOver(2)' onclick='CRateClick(2)' src="~/Assets/star.png" alt="">
+                                            <img class="rating-star" id="span3" onmouseout="CRateOut(3)" onmouseover="CRateOver(3)" onclick="CRateClick(3)" src="~/Assets/star.png" alt="">
+                                            <img class="rating-star" id="span4" onmouseout="CRateOut(4)" onmouseover="CRateOver(4)" onclick="CRateClick(4)" src="~/Assets/star.png" alt="">
+                                            <img class="rating-star" id="span5" onmouseout="CRateOut(5)" onmouseover="CRateOver(5)" onclick="CRateClick(5)" src="~/Assets/star.png" alt="">
+                                        </div>
+                                        <div>
+                                            <input type="hidden" id="lblRating" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="border-top mt-4">
+                                <div>
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <div class="star">
+                                            <img src="~/Assets/star-empty.png"  alt="">
+                                            <img src="~/Assets/star-empty.png"  alt="">
+                                            <img src="~/Assets/star-empty.png"  alt="">
+                                            <img src="~/Assets/star-empty.png"  alt="">
+                                            <img src="~/Assets/star-empty.png"  alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <div class="d-flex mt-4">
+                            <div class="loc ps-1">
+                                <img src="~/images/Assets/pin1.png" alt="" class="mb-5 mt-2">
+                                <p>City <br>@Model.City.Name</p>
+                            </div>
+                            <div class="loc ps-1 ms-2">
+                                <img src="~/images/Assets/web.png" alt="" class="mb-5 mt-2">
+                                <p>Theme <br>@Model.mission_details.ShortDescription</p>
+                            </div>
+                            <div class="loc ps-1 ms-2">
+                                <img src="~/images/Assets/calender.png" alt="" class="mb-4 mt-2">
+                                <p>
+                                    Date <br>From @Model.mission_details.StartDate.Value.ToShortDateString() until  @Model.mission_details.EndDate.Value.ToShortDateString()
+                                </p>
+                            </div>
+                            <div class="loc ps-1 ms-2">
+                                <img src="~/images/Assets/add1.png" alt="" class="mb-4 mt-2">
+                                <p>Organization <br>@Model.mission_details.OrganizationName</p>
+                            </div>
+                        </div>
+
+                        <div class="row text-center mt-4">
+                            <div class="col-lg-12">
+                               @*Apply button*@
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    var CurrentMissionId = Model.mission_details.MissionId;
+                                    var user = @Model.Users.Where(u => u.Email == Email).Select(u => u.UserId).FirstOrDefault();
+
+                                    var alreadyApplied = @Model.missionApplications.Where(x => x.UserId == Convert.ToInt32(user) && x.MissionId == CurrentMissionId).FirstOrDefault();
+                                    if(alreadyApplied == null)
+                                    {
+                                       <button type="submit" class="btn login" onclick="applyMission()"
+                                            style="width: 30%;border-radius: 20px;border:2px solid #F88634;color: #F88634">Apply Now &ensp;
+                                            <img src="~/images/Assets/right-arrow.png" alt="">
+                                        </button>
+                                    }
+                                    else
+                                    {
+                                        <button type="submit" class="btn login" onclick="applyMission()"
+                                            style="width: 30%;border-radius: 20px;border:2px solid #F88634;color: #F88634">Already Applied &ensp;
+                                            <img src="~/images/Assets/right-arrow.png" alt="">
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <button type="button" class="btn" id="login"
+                                        style="width: 30%;border-radius: 20px;border:2px solid #F88634;color: #F88634">Apply
+                                        &ensp;<img src=".\..\images\Assets\right-arrow.png" alt="">
+                                    </button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-8 mt-5">
+                    <ul class="nav nav-tabs mb-3" id="myTab0" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active mission" id="home-tab0" data-bs-toggle="tab"
+                                        data-bs-target="#home0" type="button" role="tab" aria-controls="home" aria-selected="true"
+                                        style="color:rgb(30, 29, 29)">Mission    
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab0" data-bs-toggle="tab" data-bs-target="#profile0"
+                                        type="button" role="tab" aria-controls="profile" aria-selected="false"
+                                        style="color:rgb(30, 29, 29)">
+                                Organization
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab0" data-bs-toggle="tab" data-bs-target="#contact0"
+                                        type="button" role="tab" aria-controls="contact" aria-selected="false"
+                                        style="color:rgb(30, 29, 29)">
+                                Comments
+                            </button>
+                        </li>
+                    </ul>
+                <div class="tab-content" id="myTabContent0">
+                    <div class="tab-pane fade show active" id="home0" role="tabpanel" aria-labelledby="home-tab0">
+                        <div class="intro mt-4 mb-3">
+                            <h4>Introduction</h4>
+                        </div>
+                        <div class="text">
+                            <p>@Model.mission_details.ShortDescription <br />
+                                    quibusdam obcaecati mollitia eos aliquid earum delectus neque quaerat ratione dolore
+                                    iusto unde!
+                                    Deserunt quibusdam obcaecati mollitia eos aliquid earum delectus neque
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, omnis ducimus,
+                                dolorem quibusdam obcaecati mollitia eos aliquid earum delectus neque quaerat ratione dolore
+                                iusto unde! Deserunt
+                                
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, omnis ducimus,
+                                dolorem quibusdam obcaecati mollitia eos aliquid earum delectus neque quaerat ratione dolore
+                                iusto unde! Deserunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maxime nam
+                                vitae. Sit nobis repellendus praesentium dolor, fuga ipsum! Veritatis numquam fugiat nam aspernatur
+                                consectetur amet non. Corporis, asperiores harum. 
+                            </p>
+                        </div>
+                        <div class="Challenge mt-4 mb-3">
+                            <h4>Challenge</h4>
+                        </div>
+                        <div class="text">
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, omnis ducimus,
+                                dolorem quibusdam obcaecati mollitia eos aliquid earum delectus neque quaerat ratione dolore
+                                iusto unde! Deserunt
+                                
+                            </p>
+                            <p>    
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, omnis ducimus,
+                                dolorem
+                                quibusdam obcaecati mollitia eos aliquid earum delectus neque quaerat ratione dolore
+                                iusto unde!
+                                Deserunt
+                            </p>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, omnis ducimus,
+                                dolorem
+                                quibusdam obcaecati mollitia eos aliquid earum delectus neque quaerat ratione dolore
+                                iusto unde!
+                                Deserunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maxime nam
+                                vitae. Sit
+                                nobis repellendus praesentium dolor, fuga ipsum! Veritatis numquam fugiat nam aspernatur
+                                consectetur amet non. Corporis, asperiores harum.
+                            </p>
+                        </div>
+                        <div class="Document mt-4 mb-3">
+                            <h4>Document</h4>
+                        </div>
+                        <div class="d-flex">
+                            @*documents in mission*@
+                            @foreach (var document in Model.Documents)
+                            {
+                                if(document.MissionId == Model.mission_details.MissionId)
+                                {
+                                    if (@document.DocumentType=="png")
+                                    {
+                                        <div class="pdf">
+                                            <a href="@document.DocumentPath" style="text-decoration: none;color:gray" download> <img src="~/images/Assets/xlsx.png" alt="">@document.DocumentName</a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="pdf ms-3">
+                                            <a href="@document.DocumentPath" style="text-decoration: none;color:gray" download> <img src="~/images/Assets/doc.png" alt="">@document.DocumentName</a>
+                                        </div>
+                                    }                                       
+                                }
+                                
+                            }
+                        </div>
+                    </div>
+                    <div class="tab-pane fade mt-5" id="profile0" role="tabpanel" aria-labelledby="profile-tab0">
+                        <p>@Model.mission_details.OrganizationDetail</p>
+                    </div>
+                    <div class="tab-pane fade" id="contact0" role="tabpanel" aria-labelledby="contact-tab0">
+                        <textarea name="comments" id="comment" cols="110" rows="4"
+                                            placeholder="Enter your comments">
+                        </textarea>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <div class="row mt-4">
+                                    <div class="col-lg-12">
+                                        <button type="submit" class="btn login" onclick="post()"
+                                            style="width: 25%;border-radius: 20px;border:2px solid #F88634;color: #F88634">Post Comments
+                                            &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                        </button>
+                                    </div>
+                                </div>  
+                            }
+                            else{
+                                <div class="row mt-4">
+                                    <div class="col-lg-12">
+                                        <button type="button" class="btn login"
+                                            style="width: 25%;border-radius: 20px;border:2px solid #F88634;color: #F88634">Post Comments
+                                            &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                        </button>
+                                    </div>
+                                </div>  
+                            }
+                        @*comments*@
+                        @foreach (var comment in Model.comments)
+                        {
+                            <div class="row  mt-3 card shadow" style="color:gray;font-size:14px">
+                                <div class="card-body d-flex">
+                                    <div class="col-lg-2">
+                                        <img src="@Model.Users.Where(x=>x.UserId == comment.UserId).Select(x=>x.Avatar).FirstOrDefault()" alt=""
+                                                style="border-radius:50%;height:70%;width:70%">
+                                    </div>
+                                    <div class="col-lg-10">
+                                        @{
+                                            var u = comment.UserId;
+                                            var firstName = Model.Users.Where(x => x.UserId == u).Select(x => x.FirstName).FirstOrDefault();
+                                            var lastName = Model.Users.Where(x => x.UserId == u).Select(x => x.LastName).FirstOrDefault();
+                                            <p>@firstName @lastName</p>
+                                        }
+                                        <p class="text-muted">@comment.CreatedAt</p>
+                                        <p>@comment.Comments</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="information mt-5">
+                        <div class="mb-3">
+                            <h4>Information</h4>
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <p>Skills</p>
+                            </div>
+                            <div class="col-lg-9">
+                                <p>Cool, Easy Doing , Math , Computer</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <p>Days</p>
+                            </div>
+                            <div class="col-lg-9">
+                                <p>Weekend Only</p>
+                            </div>
+                        </div>
+                        <hr>
+                        @*avarage rating*@
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <p>Rating</p>
+                            </div>
+                            <div class="col-lg-9">
+                                @for  (int i = 0; i < Model.AvarageOfRating; i++)
+                                {
+                                    <span>
+                                        <img src="~/Assets/selected-star.png" class="mt-1" alt="">
+                                    </span>
+                                }
+                                @for  (int i  =  Model.AvarageOfRating; i < 5; i++)
+                                {
+                                    <span>
+                                        <img src="~/Assets/star.png" class="mt-1" alt="">
+                                    </span>
+                                }
+                                <span>(by @Model.NumberOfVolunteers volunteers)</span>
+                            </div>
+                        </div>
+                    </div>                      
+                    <div class="recent mt-5">
+                        <div class="  mb-3">
+                            <h4>Recent Volunteers</h4>
+                            <hr>
+                        </div>
+                        @*Images of volunteer*@
+                        <div class="d-flex justify-content-evenly flex-wrap">
+                        @{
+                            @foreach (var recentVolunteer in @Model.missionApplications.Where(x => x.MissionId == Model.mission_details.MissionId))
+                            {
+                                <div class="text-center ">
+                                    <img src="@Model.Users.Where(x=>x.UserId == recentVolunteer.UserId).Select(x=>x.Avatar).FirstOrDefault()"
+                                    class="volImg" alt=""style="border-radius:50%;height:60%;width:60%">
+                                    <p style="font-size: 13px;">
+                                    @{
+                                        var uId = recentVolunteer.UserId;
+                                        var fName = Model.Users.Where(x=>x.UserId == uId).Select(x=>x.FirstName).FirstOrDefault();
+                                        var lName = Model.Users.Where(x=>x.UserId == uId).Select(x=>x.LastName).FirstOrDefault();
+                                        <p>@fName  @lName</p>
+                                    }
+                                    </p>
+                                </div>
+                            }
+                        }
+                        </div>
+                        <footer aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+
+                                <li class="page-item">
+                                    
+                                <a class="page-link" href="#">
+                                        <
+        
+                                                            </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1-9 of 25 recent volunteers</a></li>
+
+                                <li class="page-item"><a class="page-link" href="#">></a></li>
+
+
+                            </ul>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+            <p class="text-center" style="font-size:35px">Related Missions</p>
+            <div class="row">
+                @*card from database*@
+                @foreach (var item in Model.RelatedMissions)
+                {
+                    if (@item.MissionType == "Goal")
+                    {
+                        <div class="col-12 col-md-6 col-lg-4"style="font:14px;color:gray">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="~/images/Assets/Animal-welfare-_-save-birds-campaign.png"
+                                 class="card-img-top image img2" alt="...">
+                                    <button class="btn text" id="overlap">@item.Theme.Title</button>
+                                    <div class="position-absolute location px-2 py-1">
+                                        <img src="~/images/Assets/pin.png" alt="">
+                                        @item.City.Name
+                                    </div>
+                                    <div class="position-absolute heart px-2 py-1">
+                                        <img src="~/images/Assets/heart.png" alt="">
+                                    </div>
+                                    <div class="position-absolute doc px-2 py-1">
+                                        <img src="~/images/Assets/user.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <p style="font-size: 25px;color: rgb(61, 61, 61);"style="color:gray">
+                                            @item.Title
+
+                                        </p>
+
+                                    </h5>
+                                    <p class="card-text">@item.Description</p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p>@item.OrganizationName</p>
+                                        </div>
+                                        <div>
+                                            <img src="~/images/Assets/selected-star.png" alt="">
+                                            <img src="~/images/Assets/selected-star.png" alt="">
+                                            <img src="~/images/Assets/selected-star.png" alt="">
+                                            <img src="~/images/Assets/star.png" alt="">
+                                            <img src="~/images/Assets/star.png" alt="">
+
+                                        </div>
+                                    </div>
+                                    <div class="border-top mt-4">
+                                        <div>
+                                            <div class="d-flex justify-content-center mt-4">
+                                                <div class="star">
+                                                    <p class="text-center" style="border: 1px solid gray;border-radius:20px;padding:0px 15px 0px 15px ;">
+                                                        PlantPlant 10,00010,000 Trees
+
+
+
+                                                    </p>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="col-lg-5">
+
+                                            <div class="row">
+                                                <div class="col-lg-2">
+                                                    <img src="~/images/Assets/Seats-left.png" alt="">
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <p>@item.Availability <br> Seats Left</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="d-flex">
+
+                                                <div class="col-lg-2">
+                                                    <img src="~/images/Assets/Achieved.png" alt="">
+                                                </div>
+                                                <div class="col-lg-10">
+                                                    <div class="progress">
+                                                        <div class="progress-bar" role="progressbar"
+                                                     style="width: 75%;background-color: #F88634;" aria-valuenow="75"
+                                                     aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div> <br> 8000 Achieved
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <hr>
+                                    <div class="row text-center">
+                                        <div class="col-lg-12">
+
+                                            <button type="submit"  asp-controller="Home"  asp-action="Volunteer" class="btn" id="login"  asp-route-id="@item.MissionId"
+                                            style="width: 40%;border-radius: 20px;border:2px solid #F88634;color: #F88634;">
+                                                
+                                                View Details
+                                                &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if (@item.MissionType == "Time")
+                    {
+                        <div class="col-12 col-md-6 col-lg-4"style="color:gray;font-size:14px">
+                            <div class="card">
+                                <div class="position-relative">
+                                    <img src="~/images/Assets/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                 class="card-img-top image" alt="...">
+                                    <button class="btn text" id="overlap">@item.Theme.Title</button>
+                                    <div class="position-absolute location px-2 py-1">
+                                        <img src="~/images/Assets/pin.png" alt="">
+                                        @item.City.Name
+                                    </div>
+                                    <div class="position-absolute heart px-2 py-1">
+                                        <img src="~/images/Assets/heart.png" alt="">
+                                    </div>
+                                    <div class="position-absolute doc px-2 py-1">
+                                        <img src="~/images/Assets/user.png" alt="">
+                                    </div>
+                                    <!-- <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">Environment
+                                    </p> -->
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <p style="font-size: 25px;color: rgb(61, 61, 61);">
+                                            @item.Title
+                                        </p
+                                    </h5
+                                    <p class="card-text">@item.Description </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p>@item.OrganizationName</p>
+                                        </div>
+                                        <div>
+                                            <img src="~/images/Assets/selected-star.png" alt="">
+                                            <img src="~/images/Assets/selected-star.png" alt="">
+                                            <img src="~/images/Assets/selected-star.png" alt="">
+                                            <img src="~/images/Assets/star.png" alt="">
+                                            <img src="~/images/Assets/star.png" alt="">
+
+                                        </div>
+                                    </div>
+                                    <div class="border-top mt-4">
+                                        <div>
+                                            <div class="d-flex justify-content-center mt-4">
+                                                <div class="star">
+                                                    <p class="text-center" style="border: 1px solid gray;border-radius:20px;padding:0px 15px 0px 15px ;">
+                                                             From
+                                                        From
+                                                        @item.StartDate.Value.ToShortDateString() until  @item.EndDate.Value.ToShortDateString()
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex">
+
+                                            <div class="d-flex">
+                                                <div class="col-lg-3 me-2">
+                                                    <img src="~/images/Assets/Seats-left.png" alt="">
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <p>@item.Availability <br> Seats Left</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="deadline ">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <img src="~/images/Assets/Deadline.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <p>@item.EndDate.Value.ToShortDateString() <br> Deadline</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row text-center">
+                                        <div class="col-lg-12">
+
+                                            <a type="submit"  asp-controller="Home"  asp-action="Volunteer" asp-route-id="@item.MissionId" class="btn" class="login"  asp-route-id="@item.MissionId"
+                                            style="width: 40%;border-radius: 20px;border:2px solid #F88634;color: #F88634">
+                                                
+                                                View Details
+                                                &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <hr>
+    </form>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Cookies Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms of use</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 rights">
+                    <span> © 2019 optimy.com. All Right Reserved </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+    <script src="~/js/Volunteer.js"></script>
+@*    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous"></script>*@
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    </div>
+
+   <script type="text/javascript">
+                //rating 
+                function CRateOut(rating){
+                    for (var i=1; i<=rating;i++)
+                    {
+                        $("#span"+i).attr('src',"/Assets/star.png");
+                    }
+                }
+                function CRateOver(rating){
+                    for (var i=1; i<=rating;i++)
+                    {
+                        $("#span"+i).attr('src',"/Assets/selected-star.png");
+                    }
+                }
+                function CRateClick(rating){
+                    $("#lblRating").val(rating);
+                    for (var i=1; i<rating+1;i++)
+                    {
+                        $("#span"+i).attr('src',"/Assets/selected-star.png");
+                    }
+                    for (var i=rating+1; i<=5;i++)
+                    {
+                        $("#span"+i).attr('src',"/Assets/star.png");
+                    }
+                    sendrate(rating);
+                }
+                function CRateSelected(){
+                    var rating=$("#lblRating").val();
+                    for (var i=1; i<=rating;i++)
+                    {
+                        $("#span"+i).attr('src',"/Assets/selected-star.png");
+                    }
+                }
+                function sendrate(rating){
+                    $.ajax({
+                        url:"/Home/updateandaddrate",
+                        type:"POST",
+                        data:{
+                            missionid:@Model.mission_details.MissionId,
+                            rating:rating,
+                            Email:"@Email"
+                        },
+                        success:function(result){
+                            console.log(rating);
+                            console.log("rating is updated succesfully");
+                        }
+                    });
+                }          
+        </script>
+        <script>
+             //fav
+            function fav(){
+                $.ajax({
+                    url:"/Home/AddToFav",
+                    type:"POST",
+                    data:{
+                        missionid:@Model.mission_details.MissionId,
+                        Email:"@Email"
+                    }
+                });
+            }
+            function loginToPage() {
+                alert("Login First");
+                console.log("Login First");
+            }
+        </script>
+        <script>
+             //comments
+                function post(){
+                    var c =document.getElementById("comment").value;
+                    $.ajax({
+                        type:"POST",
+                        url:"/Home/PostComment",
+                        data:{
+                            missionid:@Model.mission_details.MissionId,
+                            comment: c,
+                            email:"@Email",
+                        },
+                        success: function(response) {
+                             location.reload();
+                       }
+                    });
+                }
+        </script>
+        <script>
+            //Apply button
+            function applyMission(){
+                $.ajax({
+                    type:"POST",
+                    url:"/Home/applyForMission",
+                    data:{
+                        id:@Model.mission_details.MissionId,
+                    },
+                    success:function(response){
+                        location.reload();
+                    },
+                    error:function(){
+                        alert("Error occured during applied")
+                    }
+                });
+            }
+        </script>
+       
+
+</body>
+
+</html>

@@ -1,0 +1,681 @@
+﻿@model GeneralViewModel;
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var Email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+    var uid = identity?.FindFirst(ClaimTypes.Sid)?.Value;
+
+}
+@{
+    Pager pager = new Pager();
+    int pageNo = 0;
+    if (ViewBag.Pager != null)
+    {
+        pager = ViewBag.Pager;
+        pageNo = pager.CurrentPage;
+    }
+
+}
+
+@{
+    var count = @Model.Missions.Count();
+    if (count > 0)
+    {
+
+        <div class="row" id="grid">
+            <div class="col-lg-8 col-md-7 col-sm-6  mt-4">
+                <p class="explore">Explore <big>@Model.Missions.Count() Mission</big> </p>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-4 mt-4 d-none d-lg-block">
+
+                <a class=" dropdown ps-3" type="button" data-bs-toggle="dropdown"
+               style="border: 1px solid gray; color:black;text-decoration: none;width: 180px;">
+                    Sort by &emsp;&ensp;<img src="~/images/Assets/drop-down.png">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="loadMissions('Newest')">Newest</a></li>
+                    <li><a class="dropdown-item" onclick="loadMissions('Oldest')">Oldest</a></li>
+                    <li><a class="dropdown-item" onclick="loadMissions('Lowest')">Highest Available seats</a></li>
+                    <li><a class="dropdown-item" onclick="loadMissions('Higgest')">Lowest Available seats</a></li>
+                    <li><a class="dropdown-item" onclick="loadMissions('Goal')">Goal Theme</a></li>
+                    <li><a class="dropdown-item" onclick="loadMissions('Time')">Time Theme</a></li>
+
+                </ul>
+
+            </div>
+            <div class="col-lg-1 col-md-2 col-sm-1 mt-3 text-end d-none d-lg-block">
+
+                &ensp;<a href="#" class="btn btn-grid">
+                    <img src="~/images/Assets/grid.png" alt=""
+                 style="padding: 7px;background-color: rgb(212, 212, 212);border-radius: 50%;">
+                </a>
+            </div>
+            <div class="col-lg-1 col-md-2 col-sm-1 mt-3 text-center d-none d-lg-block">
+                <a href="#" class="btn btn-list"><img src="~/images/Assets/list.png" alt=""></a>
+            </div>
+
+        </div>
+
+
+        <div class="container grid-container">
+            @*  <form asp-controller="Home" asp-action="Platform">*@
+            <div class="row">
+
+                @foreach (var item in Model.Missions)
+                {
+                    if (@item.MissionType == "Goal" && @item.Status != "In-active")
+                    {
+                        <div class="col-12 col-md-6 col-lg-4 card">
+
+                            <div class="position-relative imageWidth">
+                              @* <img src="@Model.MissionMedia.Where(media => media.MissionId == item.MissionId).Select(media => media.MediaPath).FirstOrDefault()"
+                                        class="card-img-top image img2" alt="...">*@
+                                        <img src="~/Assets/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                        class="card-img-top image img2" alt="...">
+                               
+                                <div class="btn text" id="overlap">@item.Theme.Title</div>
+                                @*Mission close and active status button*@
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    var currentDate = DateTime.Now;
+                                    if (currentDate > item.EndDate)
+                                    {
+                                        <div class="position-absolute py-1 px-4 rounded-end" style="top: 1rem;background-color: red; color:white;">
+                                            Closed
+                                        </div>
+                                    }
+                                    else if (Model.missionApplications.Where(x => x.MissionId == item.MissionId && x.UserId == long.Parse(uid)).Count() == 1)
+                                    {
+                                        <div class="position-absolute py-1 px-4 rounded-end" style="top: 1rem;background-color: green; color:white;">
+                                            Applied
+                                        </div>
+                                    }
+                                    else if (currentDate < item.EndDate)
+                                    {
+                                        <div class="position-absolute py-1 px-4 rounded-end" style="top: 1rem;background-color: #FF6600; color:white;">
+                                            Ongoing Mission
+                                        </div>
+                                    }
+                                }
+                                <div class="position-absolute location px-2 py-1">
+                                    <img src="~/images/Assets/pin.png" alt="">
+                                    @item.City.Name
+                                </div>
+                                @*add to fav*@
+                              
+                                 @if (uid != null)
+                                { 
+                                    var currentDate2 = DateTime.Now;
+                                    if (currentDate2 < item.EndDate)
+                                    {
+                                        //@if (Model.FavoriteMissions.Any(x => x.UserId == Convert.ToInt32(uid) && x.MissionId == Model.mission_details.MissionId))
+                                        @if (Model.FavoriteMissions.Where(x => x.UserId == Convert.ToInt32(uid) &&
+                                        x.MissionId == Model.mission_details.MissionId).Count() == 1)
+                                        {
+                                            <button class="position-absolute c1-heart  heart favorite added" onclick="addFavourite(@item.MissionId);">
+                                                <img src="~/Assets/favorite.jpg" alt="" class="" style="width: 30px;height: 30px;">
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button class="position-absolute c1-heart heart favorite added" onclick=" addFavourite(@item.MissionId);">
+                                                <img src="~/Assets/heart.png" alt="" class="" style="width: 24px; height: 23px;">
+                                            </button>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        <button class="position-absolute c1-heart heart favorite added" onclick="closeMission();">
+                                            <img src="~/Assets/heart.png" alt="" class=" " style="width: 24px; height: 23px;">
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <button class="position-absolute c1-heart heart favorite added" onclick="notloggedin();">
+                                        <img src="~/Assets/heart.png" alt="" class=" " style="width: 24px; height: 23px;">
+                                    </button>
+                                }
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    var currentDate3 = DateTime.Now;
+                                    if (currentDate3 < item.EndDate)
+                                    {
+                                        <div class="btn">
+                                            @*recommended*@
+                                            <button type="button" class="position-absolute doc px-2 py-1" id="show">
+                                                <img src="~/images/Assets/user.png" alt="">
+                                            </button>
+                                            <dialog class="myDialog">
+                                                <ul>
+                                                    @foreach (var n in Model.Users)
+                                                    {
+                                                        if (n.Email != Email)
+                                                        {
+                                                            <li class="form-check" style="margin-left:-50%">
+                                                                <img src="@Model.Users.Where(x=>x.UserId == n.UserId).Select(x=>x.Avatar).FirstOrDefault()" alt=""
+                                             style="height:15%;width:15%;">
+                                                                <input type="checkbox" value="@n.UserId" id="check">
+                                                                <label class="form-check-label" for="to">
+                                                                    @n.FirstName &emsp; @n.LastName
+                                                                </label>
+                                                            </li>
+                                                        }
+                                                    }
+                                                </ul>
+                                                <button class="form-control btn btn-outline-primary m-2" onclick="recommend(@item.MissionId)">Send an email</button>
+                                                <button class="form-control btn btn-outline-danger hide-dialog m-2" id="hide">Close</button>
+                                            </dialog>
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+                                        <button class="position-absolute c1-heart heart doc added" onclick="closeMission();">
+                                            <img src="~/images/Assets/user.png" alt="">
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    //<button type="button" class="position-absolute doc px-2 py-1" onclick="notloggedin()">
+                                    //	<img src="~/images/Assets/user.png" alt="">
+                                    //</button>
+                                    <button class="position-absolute c1-heart heart doc added" onclick="notloggedin();">
+                                        <img src="~/images/Assets/user.png" alt="">
+                                    </button>
+                                }
+
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <p style="font-size: 25px;color: rgb(61, 61, 61);">
+                                        @item.Title
+                                    </p>
+                                </h5>
+                                <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;overflow: hidden;">@item.Description</p>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p>@item.OrganizationName</p>
+                                    </div>
+                                    <div>
+                                        @{
+                                            var numberOFUser = Model.missionRatings.Where(x => x.MissionId == item.MissionId).Select(x => x.Rating);
+                                            if (numberOFUser.Count() != 0)
+                                            {
+                                                var rate_star = Convert.ToInt32(Queryable.Average(numberOFUser.AsQueryable()));
+                                                for (int i = 1; i <= 5; i++)
+                                                {
+                                                    if (i <= rate_star)
+                                                    {
+                                                        <img src="~/Assets/selected-star.png">
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="~/Assets/star.png">
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                for (int i = 1; i <= 5; i++)
+                                                {
+                                                    <img src="~/Assets/star.png">
+                                                }
+                                            }
+                                        }
+                                    </div>
+                                </div>
+                                <div class="border-top mt-4">
+                                    <div>
+                                        <div class="d-flex justify-content-center mt-4">
+                                            <div class="star">
+                                                <p class="text-center" style="border: 1px solid gray;border-radius:20px;padding:0px 15px 0px 15px ;">
+                                                    Plant 10,000 Trees
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <div class="col-lg-3 me-2">
+                                            <img src="~/images/Assets/Seats-left.png" alt="">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <p>@item.Availability <br> Seats Left</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="d-flex">
+                                            <div class="col-lg-2">
+                                                <img src="~/images/Assets/Achieved.png" alt="">
+                                            </div>
+                                            <div class="col-lg-10">
+
+                                                @foreach (var goal in Model.goal)
+                                                {
+                                                        @if (item.MissionId == goal.MissionId)
+                                                        {
+                                                            <div class="progress">
+                                                                @{
+                                                                    int percentComplete = (int)Math.Round((double)(100 * @goal.GoalValue) / @goal.Aimed);
+                                                                }
+
+                                                                <div class="progress-bar" role="progressbar" style="width: @percentComplete%;background-color: #F88634;color:#F88634" aria-valuenow=@goal.GoalValue
+                                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                            <p> @goal.GoalValue Achieved </p>
+                                                        }
+                                                        else
+                                                        {
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar" style="width: 75%;background-color: #F88634 !important;" aria-valuenow="75"
+													                aria-valuemin="0" aria-valuemax="100">
+                                                                </div>
+                                                            </div>
+                                                            <p class="mb-0">8000 achieved</p>
+                                                
+                                                        }
+                                                        break;
+                                                }
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <hr>
+                                <div class="row text-center">
+                                    <div class="col-lg-12">
+                                        @if (uid != null)
+                                        {
+                                            <a asp-controller="Home" asp-action="Volunteer" class="btn buttonColor" id="login" asp-route-id="@item.MissionId"
+                           style="width:auto;border-radius: 20px;border:2px solid #F88634;color: #F88634;">
+                                                View Details
+                                                &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href="#" class="btn buttonColor" id="login" onclick="notloggedin()"
+                               style="width:auto;border-radius: 20px;border:2px solid #F88634;color: #F88634;">
+                                                View Details
+                                                &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                            </a>
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if (@item.MissionType == "Time" && @item.Status != "In-active")
+                    {
+                        <div class="col-12 col-md-6 col-lg-4 card">
+                            <div class="position-relative imageWidth">
+                              @*  <img src="~/Assets/CSR-initiative-stands-for-Coffee--and-Farmer-Equity.png"
+                                 class="card-img-top image" alt="...">*@
+                                 @*<img src="@Model.MissionMedia.Where(media => media.MissionId == item.MissionId).Select(media => media.MediaPath).FirstOrDefault()"
+                                        class="card-img-top image img2" alt="...">*@
+                                        <img src="~/Assets/Education-Supplies-for-Every--Pair-of-Shoes-Sold.png"
+                                        class="card-img-top image img2" alt="...">
+                                <button class="btn text" id="overlap">@item.ShortDescription</button>
+                                @*Mission close and active status button*@
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    var currentDate = DateTime.Now;
+                                    if (currentDate > item.EndDate)
+                                    {
+                                        <div class="position-absolute py-1 px-4 rounded-end" style="top: 1rem;background-color: red; color:white;">
+                                            Closed
+                                        </div>
+                                    }
+                                    else if (Model.missionApplications.Where(x => x.MissionId == item.MissionId && x.UserId == long.Parse(uid)).Count() == 1)
+                                    {
+                                        <div class="position-absolute py-1 px-4 rounded-end" style="top: 1rem;background-color: green; color:white;">
+                                            Applied
+                                        </div>
+                                    }
+                                    else if (currentDate < item.EndDate)
+                                    {
+                                        <div class="position-absolute py-1 px-4 rounded-end" style="top: 1rem;background-color: #FF6600; color:white;">
+                                            Ongoing Mission
+                                        </div>
+                                    }
+                                }
+                                <div class="position-absolute location px-2 py-1">
+                                    <img src="~/images/Assets/pin.png" alt="">
+                                    @item.City.Name
+                                </div>
+
+                                @if (uid != null)
+                                {
+
+                                     var currentDate4 = DateTime.Now;
+                                    if (currentDate4 < item.EndDate)
+                                    {
+                                        //@if (Model.FavoriteMissions.Where(x => x.UserId == Convert.ToInt32(uid) &&
+                                        //x.MissionId == Model.mission_details.MissionId).Count() == 1)
+                                        @if (Model.FavoriteMissions.Any(x => x.UserId == Convert.ToInt32(uid) && x.MissionId == Model.mission_details.MissionId))
+
+                                        {
+                                            <button class="position-absolute c1-heart  heart favorite added" onclick="addFavourite(@item.MissionId);">
+                                                <img src="~/Assets/favorite.jpg" alt="" class="" style="width: 30px;height: 30px;">
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button class="position-absolute c1-heart heart favorite added" onclick=" addFavourite(@item.MissionId);">
+                                                <img src="~/Assets/heart.png" alt="" class="" style="width: 24px; height: 23px;">
+                                            </button>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        <button class="position-absolute c1-heart heart favorite added" onclick="closeMission();">
+                                            <img src="~/Assets/heart.png" alt="" class=" " style="width: 24px; height: 23px;">
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <button class="position-absolute c1-heart heart favorite added" onclick="notloggedin();">
+                                        <img src="~/Assets/heart.png" alt="" class=" " style="width: 24px; height: 23px;">
+                                    </button>
+                                }
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                     var currentDate5 = DateTime.Now;
+                                    if (currentDate5 < item.EndDate)
+                                    {
+                                        <div class="btn">
+                                            @*recommended*@
+                                            <button type="button" class="position-absolute show-dialog doc px-2 py-1" id="show">
+                                                <img src="~/images/Assets/user.png" alt="">
+                                            </button>
+                                            <dialog id="myDialog">
+                                                <ul>
+                                                    @foreach (var n in Model.Users)
+                                                    {
+                                                        if (n.Email != Email)
+                                                        {
+                                                            <li class="form-check">
+                                                                <img src="@Model.Users.Where(x=>x.UserId == n.UserId).Select(x=>x.Avatar).FirstOrDefault()" alt=""
+                                                                    style="height:20%;width:20%;">
+                                                                <input type="checkbox" value="@n.UserId" id="check">
+                                                                <label class="form-check-label" for="to">
+                                                                    @n.FirstName &emsp; @n.LastName
+                                                                </label>
+                                                            </li>
+                                                        }
+                                                    }
+                                                </ul>
+                                                <button class="form-control btn btn-outline-primary m-2" onclick="recommend(@item.MissionId)">Send an email</button>
+                                                <button class="form-control btn btn-outline-danger m-2" id="hide">Close</button>
+                                            </dialog>
+                                        </div>
+
+                                    }
+                                    else
+                                    {
+                                        <button type="button" class="position-absolute doc px-2 py-1" onclick="closeMission();">
+                                            <img src="~/images/Assets/user.png" alt="">
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <button type="button" class="position-absolute doc px-2 py-1" onclick="notloggedin();">
+                                        <img src="~/images/Assets/user.png" alt="">
+                                    </button>
+                                }
+
+
+                                <!-- <p class="ps-1 pe-1" style="border-radius: 20px; background-color: white;">Environment
+                                </p> -->
+                        </div>
+
+
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <p style="font-size: 25px;color: rgb(61, 61, 61);">
+                                        @item.Title
+                                    </p>
+                                </h5>
+                                <p class="card-text" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;overflow: hidden;">@item.Description </p>
+
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p>@item.OrganizationName</p>
+                                    </div>
+                                    <div>
+                                        @{
+
+                                            var numberOFUser = Model.missionRatings.Where(x => x.MissionId == item.MissionId).Select(x => x.Rating);
+                                            if (numberOFUser.Count() != 0)
+                                            {
+                                                var rate_star = Convert.ToInt32(Queryable.Average(numberOFUser.AsQueryable()));
+                                                for (int i = 1; i <= 5; i++)
+                                                {
+                                                    if (i <= rate_star)
+                                                    {
+                                                        <img src="~/Assets/selected-star.png">
+                                                    }
+                                                    else
+                                                    {
+                                                        <img src="~/Assets/star.png">
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                for (int i = 1; i <= 5; i++)
+                                                {
+                                                    <img src="~/Assets/star.png">
+                                                }
+                                            }
+                                        }
+
+                                    </div>
+                                </div>
+                                <div class="border-top mt-4">
+                                    <div>
+                                        <div class="d-flex justify-content-center mt-4">
+                                            <div class="star">
+                                                <p class="text-center" style="border: 1px solid gray;border-radius:20px;padding:0px 15px 0px 15px ;">
+                                                    From
+                                                    @item.StartDate.ToShortDateString() until  @item.EndDate.ToShortDateString()
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex">
+
+                                        <div class="d-flex">
+                                            <div class="col-lg-3 me-2">
+                                                <img src="~/images/Assets/Seats-left.png" alt="">
+                                            </div>
+                                            <div class="col-lg-9">
+                                                <p>@item.Availability <br> Seats Left</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="deadline ">
+                                        <div class="d-flex">
+                                            <div>
+                                                <img src="~/images/Assets/Deadline.png" alt="">
+                                            </div>
+                                            <div>
+                                                <p>@item.EndDate.ToShortDateString() <br> Deadline</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row text-center">
+                                    <div class="col-lg-12">
+
+                                        @if (uid != null)
+                                        {
+                                            <a asp-controller="Home" asp-action="Volunteer" class="btn buttonColor" id="login" asp-route-id="@item.MissionId"
+                           style="width:auto;border-radius: 20px;border:2px solid #F88634;color: #F88634;">
+                                                View Details
+                                                &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a href="#" class="btn buttonColor" id="login" onclick="notloggedin()"
+                               style="width:auto;border-radius: 20px;border:2px solid #F88634;color: #F88634;">
+                                                View Details
+                                                &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+                                            </a>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            @*</form>*@
+        </div>
+    }
+    else
+    {
+        <div class="text-center my-5 linkColor" style="padding:20%">
+            <h3>No Mission Found</h3>
+            <button type="submit"  class="btn" id="login"
+            style="width: auto;border-radius: 20px;border:2px solid #F88634;color: #F88634">
+                Submit Your Mission
+                &ensp;<img src="~/images/Assets/right-arrow.png" alt="">
+            </button>
+        </div>
+
+    }
+}
+
+@if (pager.TotalPage > 0)
+{
+    <ul class="pagination justing-content-end">
+        @for (var pge = pager.StartPage; pge <= pager.EndPage; pge++)
+        {
+            <li class="page-item @(pge == pager.CurrentPage ? "active" : "")">
+                <a class="page-link" onclick="loadMissions(pg = @pge)">@pge</a>
+            </li>
+        }
+    </ul>
+}
+    <script>
+        if (localStorage.getItem('Bhagya') === 'list') {
+            showList();
+        }
+        else {
+            gridList();
+        }
+        function showList() {
+            localStorage.setItem('Bhagya', 'list');
+            var $gridCont = $(".grid-container");
+            $gridCont.addClass("list-view");
+        }
+        function gridList() {
+            localStorage.setItem('Bhagya', 'grid');
+            var $gridCont = $(".grid-container");
+            $gridCont.removeClass("list-view");
+        }
+
+
+        $(document).on('click', '.btn-grid', gridList);
+        $(document).on('click', '.btn-list', showList);</script>
+    <script>
+    function addFavourite(missionId) {
+        console.log(missionId);
+        $.ajax({
+            url: "/Home/FavouriteMission",
+            type: "POST",
+            data: {
+                mId: missionId
+            },
+            success: function (result) {
+                console.log(result);
+                location.reload();
+                //$('.xyz').html($(result).find('.xyz').html());
+            }
+        });
+    }
+    </script>
+
+
+    <script>
+        //fav
+        function fav(id){
+
+            $.ajax({
+                url:"/Home/AddToFav",
+                type:"POST",
+                data:{
+                    "missionid":id,
+                    "email":"@Email",
+                },
+                success : function(){
+                    location.reload();
+                }
+            });
+
+        }
+
+
+        //Recommenrded
+        var dialog = document.querySelector('.myDialog');
+        document.querySelector('.show-dialog').onclick = function () { dialog.showModal(); };
+        document.querySelector('.hide-dialog').onclick = function () { dialog.close(); };
+
+        function recommend(id) {
+          var to = [];
+         // $(".check:checked").each(function () {
+            //to.push($(this).val());
+         // });
+          $("input:checkbox.check:checked").each(function () {
+                to.push($(this).val());
+            });
+          $.ajax({
+            url: "/Home/Recommend",
+            type: "POST",
+            data: {
+              "missionid": id,
+              to: to
+            }
+          });
+        }
+
+          function closeMission() {
+        // trigger the alert message using Swal.fires
+            Swal.fire({
+                icon: 'error',
+                showCloseButton: true,
+                title: 'This Mission is Close',
+                showConfirmButton: false,
+                
+            });
+        //console.log(footer);
+        };
+
+    </script>
+
+

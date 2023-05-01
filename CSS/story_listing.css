@@ -1,0 +1,124 @@
+#List {
+    display: none;
+  }
+  
+  @media (max-width:767px) {
+    #List {
+      display: block;
+    }
+  
+    #Main {
+      display: none;
+    }
+  
+    .dropdown {
+      float: left;
+    }
+  }
+
+  /* history */
+  .filter-list {
+  
+    background-color: white;
+    border: 1px solid #808080;
+    border-radius: 50px;
+    color: #000;
+    cursor: pointer;
+    width: auto;
+  }
+  
+  .filter-close-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 5px;
+    color: #888;
+  }
+  .filters-section{
+    margin-top:2%;
+  }
+
+  /* card */
+  .card-text{
+    color: gray;
+  }
+  
+  #overlap1 {
+    position: sticky;
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    margin-top: -15px;
+    margin-left: 25%;
+    width: 45%;
+  }
+  #overlap2 {
+    position: sticky;
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    margin-top: -15px;
+    margin-left: 40%;
+    width: 25%;
+  }
+  .star{
+    margin-top: -38px;
+    background-color: white;
+  }
+
+
+  
+  .imgs img{
+    border-radius: 50%;
+    width: 12%;
+  }
+  .img2 img{
+    border-radius: 50%;
+    width: 10%;
+  }
+ 
+ .main_img{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    
+ }
+ .content{
+    position: absolute;
+    top: 0;
+    left:-100%;
+    background-color:rgb(0, 0, 0,0.5);
+    height: 100%;
+    width: 100%;
+ }
+ .main_img:hover .content{
+    left:0;
+    transition: all 0.7s;
+    color: white;
+    padding-top: 150px;
+ }
+
+ .shareYourStoryBtn{
+    border-radius: 50px;
+ }
+ .CardImage{
+    overflow: hidden;
+ }
+
+ .ViewButton{
+    top: -100%;
+    left: 0;
+    background-color:rgb(0, 0, 0,0.5);
+    height: 100%;
+    width: 100%; 
+ }
+.CardImage:hover .ViewButton{
+    top: 0;
+    transition: all 0.7s;
+    padding-top: 20%;
+    
+}

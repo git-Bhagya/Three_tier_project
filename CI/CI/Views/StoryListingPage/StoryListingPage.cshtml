@@ -1,0 +1,225 @@
+﻿@model CI.Entities.ViewModels.GeneralViewModel
+
+@using System.Security.Claims;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var Email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/StoryListingPage.css">
+
+    <title>Story Listing</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar" id="List">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="~/images/Assets/user-img.png" class="rounded-circle" style="width:50px;height:50px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        arialeftfalse" aria-labottomnavigation">
+                    <img src="~/images/Assets/list.png">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Story</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                Policy
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="dropdown" data-bs-toggle="dropdown"
+                               style="text-decoration: none; color: #333333;">
+                                @name @surname
+                                <img src="~/images/Assets/drop-down.png">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">1</a></li>
+                                <li><a class="dropdown-item" href="#">2</a></li>
+                                <li><a class="dropdown-item" href="#">3</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar nav" id="Main">
+            <div class="col-lg-2 pt-3">
+                @*<p class="text-end">Stories</p>*@
+                <button type="submit" class="pb-3" asp-action="StoryListingPage" asp-controller="StoryListingPage" style="border:none;background:none;margin-left:180px">Stories</button>
+            </div>
+            <div class="dropdown col-lg-6 ">
+                Policy
+                <button class=" dropdown" type="button" data-bs-toggle="dropdown"
+                        style="border:none; background-color:white;">
+                    <img src="~/images/Assets/drop-down.png">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">1</a></li>
+                    <li><a class="dropdown-item" href="#">2</a></li>
+                    <li><a class="dropdown-item" href="#">3</a></li>
+                </ul>
+
+            </div>
+            <div class="dropdown col-lg-3 text-end">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-link profile-link-part" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                        <img src="~/Assets/user-img.png" class="rounded-circle" height="35" width="35" alt="Profile pic"
+                         loading="lazy" />
+                        <span class="px-2" style="color:black">@name @surname</span>
+                        <img src="~/Assets/drop-down.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown" style="left:auto;top:80%; z-index:1050;">
+                        <li><a class="dropdown-item btn" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item btn" href="#">My Account</a></li>
+                        <li><a class="dropdown-item btn" href="#">Help Center</a></li>
+                        <li><a class="dropdown-item btn" asp-controller="Home" asp-action="Logout">Logout</a></li>
+                    </ul>
+                }
+                else
+                {
+                    <ul class="d-flex text-decoration-none float-end" style="list-style:none">
+                        <li><a class="dropdown-item btn" asp-controller="Login" asp-action="Login">Login</a></li>
+                        <li><a class="dropdown-item btn ms-2" asp-controller="Registration" asp-action="Registration">Register</a></li>
+                    </ul>
+                }
+            </div>
+        </nav>
+    </div>
+   <hr />
+    <form asp-controller="StoryListingPage"asp-action="StoryListingPage">
+    <div class="container-fluid">
+        
+        <div class="main_img">
+            <img src="~/images/Assets/Grow-Trees-On-the-path-to-environment-sustainability-2.png" alt="" style="width:100%;height:500px;object-fit:cover;
+                ">
+            <div class="content text-center">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione repudiandae autem nihil error
+                    voluptatibus at! Unde accusamus <br> temporibus, eaque consectetur, aspernatur incidunt, sed quos
+                    repellendus.</p>
+                <button type="submit" class="btn btn-outline-light shareYourStoryBtn"asp-action="ShareStory"asp-controller="ShareStory">Share Your Story <i
+                        class="bi bi-arrow-right"></i></button>
+            
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        
+            <div class="row mt-5">
+                    @foreach (var item in Model.stories)
+                    {
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card">
+                                <div class="position-relative w-100 h-100 CardImage">
+                                    <img src="~/images/Assets/Grow-Trees-On-the-path-to-environment-sustainability.png"
+                                        class="card-img-top image" alt="...">
+                                    <div class="ViewButton text-center position-absolute">
+                                        <button type="submit" class="btn btn-outline-light shareYourStoryBtn"asp-controller="Home"asp-action="Volunteer"asp-route-id="@item.MissionId">View Details<i
+                                                class="bi bi-arrow-right"></i></button>
+                                    </div>
+
+                                </div>
+                                <button class="btn text" id="overlap1">Customer Experiment</button>
+                                <div class="card-body">
+                                <h5 class="card-title">
+                                    <p style="font-size: 25px;color: rgb(61, 61, 61);">@item.Title
+                                    </p>
+                                </h5>
+                                <p class="card-text">@item.Description</p>
+                                <div class="d-flex align-items-center imgs">
+                                    <img src="@Model.Users.Where(x => x.UserId == item.UserId).Select(x=>x.Avatar).FirstOrDefault()" alt="">
+                                    @{
+                                        var fName = Model.Users.Where(x => x.UserId == item.UserId).Select(x=>x.FirstName).FirstOrDefault();
+                                        var lName = Model.Users.Where(x => x.UserId == item.UserId).Select(x=>x.LastName).FirstOrDefault();
+                                        <p class="mb-0 ms-3">
+                                        @fName @lName
+                                        </p>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+      
+        <div class="d-flex justify-content-center">
+            <cs-pager cs-paging-pagenumber=@Model.currentPage
+                      cs-paging-totalitems=@Model.totalrecord
+                      cs-paging-pagesize="3"
+                      cs-pagenumber-param="pageIndex"
+                      asp-controller="Home"
+                      asp-action="Platform"
+                      cs-pager-li-current-class="page-item active"
+                      cs-pager-li-other-class="page-item"
+                      cs-pager-li-non-active-class="page-item disabled"
+                      cs-pager-link-current-class="page-link"
+                      cs-pager-link-other-class="page-link">
+            </cs-pager>
+        </div>
+    </div>
+    </form>
+        <div class="container-fluid">
+
+            <div class="d-flex justify-content-between py-4 my-4 border-top">
+                <p style="margin-left:290px">Privacy Policy</p>
+                <ul class="list-unstyled d-flex">
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                </ul>
+              </div>
+        </div>
+    </div>
+
+
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>*@
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                    crossorigin="anonymous"></script>
+                <script src="~/js/StoryListingPage.js"></script>
+                   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="~/js/StoryListingPage.js"></script>
+
+</body>
+
+</html>

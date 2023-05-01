@@ -1,0 +1,227 @@
+﻿@model AdminViewModel
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
+</head>
+<body>
+    <div class="container border mt-5" style="background-color:#F8F9FC;">
+        <div class="">
+            <h4 class="fw-normal my-4 ms-2">Add</h4>
+        </div>
+    </div>
+    <form class="border border-top-0" method="post" asp-action="GetmissionAdd" asp-controller="Admin" enctype="multipart/form-data">
+        <div class="row">
+            <div class="mb-3  col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Mission Title</label>
+                <input type="text" class="form-control" asp-for="MissionTitle">
+                <span asp-validation-for="MissionTitle" class="text-danger"></span>
+            </div>
+            <div class="mb-3  col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Short Description</label>
+                <input type="text" class="form-control" asp-for="SDescription">
+                <span asp-validation-for="SDescription" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Description </label>
+            <textarea type="text" class="form-control" asp-for="Description" rows="6" cols="70"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Select Country</label>
+                <select id="Country" class="form-control mt-2" asp-for="country">
+                    <option disabled selected>Select an option </option>
+
+                </select>
+            </div>
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Select City</label>
+                <select id="City" class="form-control mt-2" asp-for="city">
+                    <option disabled selected>Select an option </option>
+
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Organization Name</label>
+                <input type="text" class="form-control" asp-for="OrgName">
+                <span asp-validation-for="OrgName" class="text-danger"></span>
+            </div>
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Organization Details</label>
+                <input type="text" class="form-control" asp-for="OrgDetails">
+                <span asp-validation-for="OrgDetails" class="text-danger"></span>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">StartDate</label>
+                <input type="date" class="form-control" asp-for="StartDate">
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">EndDate</label>
+                <input type="date" class="form-control actionEdit" asp-for="EndDate">
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+
+        </div>
+        @*<div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Mission Type</label>
+            <input type="text" class="form-control" asp-for="MissionType">
+            <span asp-validation-for="MissionType" class="text-danger"></span>
+            </div>*@
+        <div class="row">
+            <div class="mb-3 col-lg-6">
+                <label class="ms-1 col-lg-6">Type</label>
+                <select class="form-control mt-2" asp-for="MissionType">
+                    <option disabled selected>Select an option </option>
+                    <option>Time</option>
+                    <option>Goal</option>
+                </select>
+                <span asp-validation-for="MissionType" class="text-danger"></span>
+
+            </div>
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label col-lg-6">Mission Total Seats</label>
+                <input type="number" class="form-control" asp-for="Seats">
+                <span asp-validation-for="Seats" class="text-danger"></span>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="mb-3 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Select Theme</label>
+            <select id="Themes" class="form-control mt-2" asp-for="Theme" onclick="selectTheme()">
+                <option disabled selected>Select an option </option>
+                <span asp-validation-for="Theme" class="text-danger"></span>
+
+            </select>
+            </div>
+
+
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Mission Images</label>
+                <input type="file" class="form-control"  multiple accept="image/*,video/*" asp-for="Mimages">
+                <span asp-validation-for="Mimages" class="text-danger"></span>
+            </div>
+
+          
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="inputState" class="form-label">Skill Name</label>
+                <div class="dropdown">
+                    <button class="btn btn-primary bg-transparent text-dark border-dark w-100 float-start" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Skills
+                    </button>
+                    <ul class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                        @foreach (var skill in Model.SkillList)
+                        {
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="@skill.SkillId" id="@skill.SkillId" name="listOfSkill"/>
+                                        <label class="form-check-label" for="@skill.SkillId">@skill.SkillName</label>
+                                    </div>
+                                </a>
+                            </li>
+                        }
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Mission Document</label>
+                <input type="file" class="form-control"  multiple accept="image/*,video/*" asp-for="Document">
+                <span asp-validation-for="Document" class="text-danger"></span>
+            </div>
+            <div class="mb-3 col-lg-6">
+                <label for="exampleFormControlInput1" class="form-label">Mission Video</label>
+                <input type="text" class="form-control" asp-for="Video">
+                <span asp-validation-for="Video" class="text-danger"></span>
+            </div>
+
+        </div>
+        
+        <div class="row d-flex justify-content-end">
+            <div class="text-end mb-3">
+                <button type="button" class="btn buttonColor rounded-5" style="color:#f88634;border:2px solid #f88634">Cancel</button>
+                <button type="submit" class="btn buttonColor rounded-5 ms-2" style="color:#f88634;border:2px solid #f88634">Save</button>
+            </div>
+        </div>
+    </form>
+    <style>
+        .buttonColor:hover {
+            color: white;
+            background-color: #f88634;
+        }
+    </style>
+    
+</body>
+</html>
+<script>
+    //city and country
+       getCountry();
+       $('#City').attr('disabled', true);
+       $('#Country').change(function () {
+           $('#City').empty();
+           $('#City').append('<option>Select City</option>')
+           $('#City').attr('disabled', false);
+           var countryId = $('#Country	').val();
+           $.ajax({
+               url: '/User/getCityList',
+               data: {
+                   id: countryId,
+               },
+               type: "POST",
+               success: function (result) {
+                   $.each(result, function (i, data) {
+                       $('#City').append('<option value=' + data.cityId + '>' + data.name + '</option>')
+                   })
+
+               }
+           })
+       })
+
+       function getCountry() {
+           $.ajax({
+               url: '/User/getCountryList',
+               type: 'POST',
+               success: function (result) {
+                   $.each(result, function (i, data) {
+                       $('#Country').append('<option value=' + data.countryId + '>' + data.name + '</option>');
+                   })
+               },
+           })
+       }
+
+       //select Theme
+       function selectTheme() {
+           $.ajax({
+               url: '/Admin/getThemeList',
+               type: 'POST',
+               success: function (result) {
+                   $.each(result, function (i, data) {
+                       $('#Themes').append('<option value=' + data.themeId + '>' + data.title + '</option>');
+                   })
+               },
+           })
+       }
+
+</script>

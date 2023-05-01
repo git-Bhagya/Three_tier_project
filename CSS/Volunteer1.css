@@ -1,0 +1,632 @@
+#List {
+  display: none;
+}
+
+@media (max-width:767px) {
+  #List {
+    display: block;
+  }
+
+  #Main {
+    display: none;
+  }
+
+  .dropdown {
+    float: left;
+  }
+}
+
+/* #List1 {
+  display: none;
+}
+@media (max-width:767px) {
+  #List1{
+    display: block;
+  }
+  #Main1{
+    display: none;
+  }
+} */
+
+.btn-outline-secondary {
+  border-radius: 50px;
+  font-size: 10px;
+}
+
+.explore {
+  font-size: 25px;
+  color: gray;
+}
+
+big {
+  color: rgb(58, 56, 56);
+}
+
+
+.copyright {
+  padding: 28px 0;
+  margin-top: 55px;
+  /* background-color: #202020; */
+}
+
+
+/* history */
+.filter-list {
+
+  background-color: white;
+  border: 1px solid #808080;
+  border-radius: 50px;
+  color: #000;
+  cursor: pointer;
+}
+
+.filter-close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 5px;
+  color: #888;
+}
+
+.filters-section {
+  margin-top: 2%;
+}
+
+
+
+.pdf {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.doc {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.xlsx {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.information {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.recent {
+  border: 1px solid gray;
+  padding: 10px;
+}
+
+.copyright {
+  padding: 28px 0;
+  margin-top: 55px;
+  /* background-color: #202020; */
+}
+
+.copyright span,
+.copyright a {
+  color: #878787;
+
+}
+
+.copyright a:hover {
+  color: #007bff;
+}
+
+.copyright-menu ul {
+  text-align: left;
+  margin: 0;
+}
+
+.copyright-menu ul li a {
+  text-decoration: none;
+}
+
+.copyright-menu li {
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.rights {
+  text-align: right;
+
+}
+
+.dropdown-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+
+}
+
+/* related mission */
+
+.location {
+  top: 10px;
+  right: 10px;
+  background-color: black;
+  opacity: 0.6;
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  padding: 5px;
+  position: absolute;
+}
+
+.heart {
+  bottom: 80px;
+  right: 10px;
+  background-color: black;
+  opacity: 0.6;
+  padding: 5px;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.doc {
+  bottom: 35px;
+  right: 10px;
+  background-color: black;
+  opacity: 0.6;
+  padding: 5px;
+  border-radius: 50px;
+  position: absolute;
+}
+
+#overlap {
+  text-decoration: none;
+  border-radius: 50px;
+  background-color: white;
+  border: none;
+  margin-top: -15px;
+  margin-left: 30%;
+  width: 40%;
+}
+
+.favorite {
+  border: 2px solid gray;
+  border-radius: 30px;
+  color: gray;
+  text-decoration: none;
+  padding: 7px 70px 7px 70px;
+  background-color: white;
+
+}
+
+.Recommend {
+  border: 2px solid gray;
+  border-radius: 30px;
+  color: gray;
+  text-decoration: none;
+  /* padding:10px 20px 10px 20px; */
+  padding: 7px 35px 7px 35px;
+  background-color: white;
+
+}
+
+.loc {
+  border: 1px solid gray;
+  /* padding:10px 45px 0px 10px; */
+  width: 25%;
+  height: 130px;
+}
+
+
+.date-btn {
+  border-radius: 22px;
+  border: 2px solid #E8E8E8;
+  background-color: white;
+  width: auto;
+  font-size: 13px;
+  padding: 0 30px;
+}
+
+
+.star {
+  margin-top: -38px;
+  background-color: white;
+}
+
+#volenteers {
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img{
+  object-fit: cover;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+  object-fit: cover;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* bottom border */
+.topnav {
+  /* background-color: #333; */
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #8f8f8f;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid rgb(26, 25, 25);
+  color: #000;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid rgb(14, 14, 14);
+  color: #000;
+}
+
+/* tab */
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-color: transparent;
+  color: #505050;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 3px solid #080808;
+  font-weight: 500;
+}
+
+
+
+
+body {
+  background-color: #FAFAFA
+}
+
+.heartbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+       svg {
+cursor: pointer;
+overflow: visible;
+width: 60px;
+margin: 20px;
+}
+
+svg #heart {
+transform-origin: center;
+animation: animateHeartOut .3s linear forwards;
+}
+
+svg #main-circ {
+transform-origin: 29.5px 29.5px;
+}
+
+.checkbox {
+display: none;
+}
+
+.checkbox:checked+label svg #heart {
+transform: scale(0.2);
+fill: #E2264D;
+animation: animateHeart .3s linear forwards .25s;
+}
+
+.checkbox:checked+label svg #main-circ {
+transition: all 2s;
+animation: animateCircle .3s linear forwards;
+opacity: 1;
+}
+
+.checkbox:checked+label svg #heartgroup1 {
+opacity: 1;
+transition: .1s all .3s;
+}
+
+.checkbox:checked+label svg #heartgroup1 #heart1 {
+transform: scale(0) translate(0, -30px);
+transform-origin: 0 0 0;
+transition: .5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup1 #heart2 {
+transform: scale(0) translate(10px, -50px);
+transform-origin: 0 0 0;
+transition: 1.5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup2 {
+opacity: 1;
+transition: .1s all .3s;
+}
+
+.checkbox:checked+label svg #heartgroup2 #heart1 {
+transform: scale(0) translate(30px, -15px);
+transform-origin: 0 0 0;
+transition: .5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup2 #heart2 {
+transform: scale(0) translate(60px, -15px);
+transform-origin: 0 0 0;
+transition: 1.5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup3 {
+opacity: 1;
+transition: .1s all .3s;
+}
+
+.checkbox:checked+label svg #heartgroup3 #heart1 {
+transform: scale(0) translate(30px, 0px);
+transform-origin: 0 0 0;
+transition: .5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup3 #heart2 {
+transform: scale(0) translate(60px, 10px);
+transform-origin: 0 0 0;
+transition: 1.5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup4 {
+opacity: 1;
+transition: .1s all .3s;
+}
+
+.checkbox:checked+label svg #heartgroup4 #heart1 {
+transform: scale(0) translate(30px, 15px);
+transform-origin: 0 0 0;
+transition: .5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup4 #heart2 {
+transform: scale(0) translate(40px, 50px);
+transform-origin: 0 0 0;
+transition: 1.5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup5 {
+opacity: 1;
+transition: .1s all .3s;
+}
+
+.checkbox:checked+label svg #heartgroup5 #heart1 {
+transform: scale(0) translate(-10px, 20px);
+transform-origin: 0 0 0;
+transition: .5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup5 #heart2 {
+transform: scale(0) translate(-60px, 30px);
+transform-origin: 0 0 0;
+transition: 1.5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup6 {
+opacity: 1;
+transition: .1s all .3s;
+}
+
+.checkbox:checked+label svg #heartgroup6 #heart1 {
+transform: scale(0) translate(-30px, 0px);
+transform-origin: 0 0 0;
+transition: .5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup6 #heart2 {
+transform: scale(0) translate(-60px, -5px);
+transform-origin: 0 0 0;
+transition: 1.5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup7 {
+opacity: 1;
+transition: .1s all .3s;
+}
+
+.checkbox:checked+label svg #heartgroup7 #heart1 {
+transform: scale(0) translate(-30px, -15px);
+transform-origin: 0 0 0;
+transition: .5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup7 #heart2 {
+transform: scale(0) translate(-55px, -30px);
+transform-origin: 0 0 0;
+transition: 1.5s transform .3s;
+}
+
+.checkbox:checked+label svg #heartgroup2 {
+opacity: 1;
+transition: .1s opacity .3s;
+}
+
+.checkbox:checked+label svg #heartgroup3 {
+opacity: 1;
+transition: .1s opacity .3s;
+}
+
+.checkbox:checked+label svg #heartgroup4 {
+opacity: 1;
+transition: .1s opacity .3s;
+}
+
+.checkbox:checked+label svg #heartgroup5 {
+opacity: 1;
+transition: .1s opacity .3s;
+}
+
+.checkbox:checked+label svg #heartgroup6 {
+opacity: 1;
+transition: .1s opacity .3s;
+}
+
+.checkbox:checked+label svg #heartgroup7 {
+opacity: 1;
+transition: .1s opacity .3s;
+}
+
+@keyframes animateCircle {
+40% {
+  transform: scale(10);
+  opacity: 1;
+  fill: #DD4688;
+}
+55% {
+  transform: scale(11);
+  opacity: 1;
+  fill: #D46ABF;
+}
+65% {
+  transform: scale(12);
+  opacity: 1;
+  fill: #CC8EF5;
+}
+75% {
+  transform: scale(13);
+  opacity: 1;
+  fill: transparent;
+  stroke: #CC8EF5;
+  stroke-width: .5;
+}
+85% {
+  transform: scale(17);
+  opacity: 1;
+  fill: transparent;
+  stroke: #CC8EF5;
+  stroke-width: .2;
+}
+95% {
+  transform: scale(18);
+  opacity: 1;
+  fill: transparent;
+  stroke: #CC8EF5;
+  stroke-width: .1;
+}
+100% {
+  transform: scale(19);
+  opacity: 1;
+  fill: transparent;
+  stroke: #CC8EF5;
+  stroke-width: 0;
+}
+}
+
+@keyframes animateHeart {
+0% {
+  transform: scale(0.2);
+}
+40% {
+  transform: scale(1.2);
+}
+100% {
+  transform: scale(1);
+}
+} 
+
+@keyframes animateHeartOut {
+0% {
+  transform: scale(1.4);
+}
+100% {
+  transform: scale(1);
+} 
+}

@@ -1,0 +1,161 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Ci_Project
+build_property.RootNamespace = Ci_Project
+build_property.ProjectDir = C:\Users\BHAGYA\Desktop\Ci-Platform-main\CI_Integration-main\Laptop_CI-main\Ci_Project\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\BHAGYA\Desktop\Ci-Platform-main\CI_Integration-main\Laptop_CI-main\Ci_Project
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Admin/AdminLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Admin/AdminUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Forgot/Forgot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9yZ290XEZvcmdvdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Home/Platform.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQbGF0Zm9ybS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Home/StoryDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdG9yeURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Home/Volunteer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxWb2x1bnRlZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Registration/Registration.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cmF0aW9uXFJlZ2lzdHJhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Reset/Reset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzZXRcUmVzZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_AddCMS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZGRDTVMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_AllNavbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BbGxOYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_Banner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYW5uZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_cardsPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9jYXJkc1BhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_CMSPagePartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DTVNQYWdlUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_EditCMS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FZGl0Q01TLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9mb290ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_MissionAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_MissionApplication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uQXBwbGljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_MissionEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_MissionPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_MissionTheme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NaXNzaW9uVGhlbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9uYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_Skill.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ta2lsbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_StoryPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdG9yeVBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_User.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Story/shareYourStoryPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3Rvcnlcc2hhcmVZb3VyU3RvcnlQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Story/StoryListingPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RvcnlcU3RvcnlMaXN0aW5nUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/User/PolicyPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQb2xpY3lQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/User/UserProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxVc2VyUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/User/VolunteerTimesheet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxWb2x1bnRlZXJUaW1lc2hlZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/BHAGYA/Desktop/Ci-Platform-main/CI_Integration-main/Laptop_CI-main/Ci_Project/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-03iurvbbdo

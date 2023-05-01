@@ -1,0 +1,253 @@
+﻿@model AdminViewModel
+@using System.Security.Claims;
+@using Ci_Project.Entities.ViewModels;
+@{
+    var identity = User.Identity as ClaimsIdentity;
+    var name = identity?.FindFirst(ClaimTypes.Name)?.Value;
+    var surname = identity?.FindFirst(ClaimTypes.Surname)?.Value;
+    var email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+
+    //var Email = identity?.FindFirst(ClaimTypes.Email)?.Value;
+    var uid = identity?.FindFirst(ClaimTypes.Sid)?.Value;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/Admin.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    @*<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>*@
+            <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+    <title>Admin Page</title>
+</head>
+
+<body>
+
+    <div class="container-fluid m-0 " style="width:100vw;">
+        <div class="row d-flex">
+            <div class="navigationbar col-2 col-xl-2 col-lg-3 col-md-1 d-none d-md-block px-2 px-lg-2 px-md-0 ">
+                <div class="mt-4 col-12 d-none d-lg-block">
+                    <lable class="sideheader fw-bold fs-6 text-white text-break ms-2">NAVIGATION</lable>
+                </div>
+                <ul class="nav nav-pills flex-column mb-auto mt-4 mt-lg-4 mt-md-5">
+
+                    @*<li class="nav-item">
+                        <a href="#1" class="nav-link sidebarcontent active" aria-current="page">
+
+                        <i class="bi bi-person-fill sidebar-img "></i>
+                        <lable class="d-block d-lg-block d-md-none">User</lable>
+                        </a>
+                        </li>*@
+                    <li class="nav-item">
+                        <a asp-action="Users" asp-controller="Admin" class="nav-link sidebarcontent " aria-current="page">
+
+                            <i class="bi bi-person-fill sidebar-img "></i>
+                            <lable class="d-block d-lg-block d-md-none">User</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="CMSPage" asp-controller="Admin" class="nav-link sidebarcontent">
+
+                            <i class="bi bi-file-earmark-text-fill sidebar-img me-2"></i>
+
+                            <lable class="d-block d-lg-block d-md-none"> CMS Page</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="MissionPage" asp-controller="Admin" class="nav-link sidebarcontent">
+
+                            <i class="bi bi-bullseye sidebar-img me-2"></i>
+
+                            <lable class="d-block d-lg-block d-md-none"> Mission</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="ThemePage" asp-controller="Admin" class="nav-link sidebarcontent">
+
+
+                            <i class="bi bi-grid-1x2-fill sidebar-img me-2"></i>
+
+                            <lable class="d-block d-lg-block d-md-none">Mission Theme</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="SkillPage" asp-controller="Admin" class="nav-link sidebarcontent">
+
+                            <i class="bi bi-tools sidebar-img me-2"></i>
+
+                            <lable class="d-block d-lg-block d-md-none">Mission Skills</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="MissionApplicationPage" asp-controller="Admin" class="nav-link sidebarcontent ">
+
+                            <i class="bi bi-folder-fill sidebar-img me-2"></i>
+
+                            <lable class="d-block d-lg-block d-md-none">Mission Application</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="StoryPage" asp-controller="Admin" class="nav-link sidebarcontent">
+
+                            <i class="bi bi-book-half sidebar-img me-2"></i>
+
+                            <lable class="d-block d-lg-block d-md-none">Story</lable>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-action="Banner" asp-controller="Admin" class="nav-link sidebarcontent">
+
+                            <i class="bi bi-border-style sidebar-img me-2"></i>
+
+                            <lable class="d-block d-lg-block d-md-none">Banner Management</lable>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <!--offcanvas for sidebar-->
+            <div class="d-block d-md-none offcanvas offcanvas-start adminofcanvasdiv h-100" data-bs-scroll="true"
+                 tabindex="-1" id="Adminoffcanvas" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title fw-bold fs-6 text-white text-break" id="offcanvasWithBothOptionsLabel">
+                        NAVIGATION
+                    </h5>
+                    <button type="button" class="border-0" data-bs-dismiss="offcanvas" aria-label="Close"
+                            style="background-color:#F88634;">
+                        <i class="bi bi-x-lg"></i>
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav nav-pills flex-column mb-auto mt-3">
+
+                        <li class="nav-item">
+                            <a asp-action="Users" asp-controller="Admin" class="nav-link sidebarcontent active " aria-current="page">
+                                <i class="bi bi-person-fill sidebar-img "></i>
+                                <lable class="d-block d-lg-block d-md-none">User</lable>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="CMSPage" asp-controller="Admin" class="nav-link sidebarcontent ">
+                                <i class="bi bi-file-earmark-text-fill sidebar-img me-2"></i>
+                                <lable class="d-block d-lg-block d-md-none"> CMS Page</lable>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="MissionPage" asp-controller="Admin" class="nav-link sidebarcontent">
+                                <i class="bi bi-bullseye sidebar-img me-2"></i>
+                                <lable class="d-block d-lg-block d-md-none"> Mission</lable>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="ThemePage" asp-controller="Admin" class="nav-link sidebarcontent">
+                                <i class="bi bi-grid-1x2-fill sidebar-img me-2"></i>
+                                <lable class="d-block d-lg-block d-md-none">Mission Theme</lable>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="SkillPage" asp-controller="Admin" class="nav-link sidebarcontent">
+                                <i class="bi bi-tools sidebar-img me-2"></i>
+                                <lable class="d-block d-lg-block d-md-none">Mission Skills</lable>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="MissionApplicationPage" asp-controller="Admin" class="nav-link sidebarcontent ">
+                                <i class="bi bi-folder-fill sidebar-img me-2"></i>
+                                <lable class="d-block d-lg-block d-md-none">Mission Application</lable>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="StoryPage" asp-controller="Admin" class="nav-link sidebarcontent">
+                                <i class="bi bi-book-half sidebar-img me-2"></i>
+                                <lable class="d-block d-lg-block d-md-none">Story</lable>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="Banner" asp-controller="Admin" class="nav-link sidebarcontent">
+                                <i class="bi bi-border-style sidebar-img me-2"></i>
+                                <lable class="d-block d-lg-block d-md-none">Banner Management</lable>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--navbar-->
+            <div class="col-12 col-xl-10 col-lg-10 col-md-11 ">
+                <div class="row shadow-lg " style="height:50px;">
+                    <div class="col-12 d-flex bg-white ">
+                        <div class="col-3 d-block d-md-none d-flex align-items-center">
+                            <button class="border-0 bg-white" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#Adminoffcanvas" aria-controls="offcanvasWithBothOptions">
+                                <i class="bi bi-list " style="font-size:40px;"></i>
+                            </button>
+                        </div>
+                        <div class="col-9 d-flex align-items-center">
+                            @DateTime.Now.ToString("dddd, MMMM d, yyyy, h:mm tt")
+                        </div>
+                        <div class="navbar-nav mt-2 my-2" style="margin-left:auto">
+                            <div class="nav-item dropdown">
+                                <button class="dropdown profile ms-auto me-3 text-end" type="button" data-bs-toggle="dropdown"
+                                        style="border: none; background-color: white;">
+                                    @*<img src="@Model.Users.Where(x => x.Email == email).Select(x => x.Avatar).FirstOrDefault()" class="rounded-circle" style="width:40px;height:40px">*@
+
+
+                                    <span id="drpdwn">@name @surname</span>
+                                    <img src="~/images/Assets/drop-down.png" id="drpdwn">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="Platform">Home</a>
+                                    <a class="dropdown-item" asp-controller="User" asp-action="UserProfile">My Profile</a>
+                                    <a class="dropdown-item" asp-controller="User" asp-action="VolunteerTimesheet">Volunteering Timesheet</a>
+                                    <a class="dropdown-item" asp-controller="Home" asp-action="Logout">Logout</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="loadSideBar">
+@*                    @await Html.PartialAsync("~/Views/Shared/_User.cshtml")
+*@                
+                       @RenderBody();
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>  
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="stylesheet" href="~/css/Datatable.css" />
+    
+    <script>
+        //$(function () {
+        //    $('.nav-link').on('click', function (event) {
+        //        event.preventDefault();
+        //        var url = $(this).attr('href');
+        //        $('#loadSideBar').load(url);
+        //    });
+        //});
+
+
+    </script>
+   
+       
+
+</body>
+</html>
